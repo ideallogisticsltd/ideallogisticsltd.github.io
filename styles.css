@@ -1,0 +1,120 @@
+
+        body {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+
+
+        }
+        .container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #555 3px solid;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .product {
+            background: #fff;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(33.333% - 40px);
+            box-sizing: border-box;
+
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                opacity: 0;
+    animation: fadeInProduct 1s ease forwards;
+        }
+        @keyframes fadeInProduct {
+    to {
+        opacity: 1;
+    }
+}
+
+        .product:hover {
+            transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            header nav {
+            float: none;
+            text-align: center;
+            margin-top: 20px;
+            }
+            .container {
+            flex-direction: column;
+            }
+            .product {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .product h2 {
+            margin: 0 0 10px 0;
+        }
+        .product p {
+            margin: 0 0 20px 0;
+        }
+        .paypal-button {
+            text-align: center;
+        }
