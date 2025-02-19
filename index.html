@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+          <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,6 +30,28 @@
             border-bottom: #555 3px solid;
             animation: fadeIn 2s ease-in-out;
         }
+        .logo img {
+            height: 60px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
         @keyframes fadeIn {
     from {
         opacity: 0;
@@ -56,6 +78,10 @@
         }
         header #branding {
             float: left;
+        }
+        header #branding img {
+            height: 60px;
+            display: block;
         }
         header #branding h1 {
             margin: 0;
@@ -96,6 +122,22 @@
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #333;
+                width: 100%;
+                text-align: center;
+            }
+            nav ul.show {
+                display: flex;
+            }
             header nav {
             float: none;
             text-align: center;
@@ -106,7 +148,7 @@
             }
             .product {
                 width: 100%;
-                margin: 20px 0;
+
             }
 
         }
@@ -124,14 +166,24 @@
         .paypal-button {
             text-align: center;
         }
+
+         footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <header >
-        <div class="container">
-            <div id="branding">
-                <h1>Ideal Logistics Investment</h1>
+
+            <div id="logo">
+                 <img src="logo.png" alt="Ideal Logistics Investment Logo" style="height: 60px;">
+
             </div>
+             
             <nav>
                 <ul>
                     <li class="current"><a href="#">Home</a></li>
@@ -139,13 +191,13 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-        </div>
+
     </header>
 
     <div class="container">
         <!-- Product 1 -->
         <div class="product">
-            <img src="glass1.jpg" alt="Double pane glass-3ft x 5ft" loading="lazy">
+            <img src="glass1.jpg"  srcset="glass1-small.jpg 480w, glass1.jpg 1024w"  alt="Double pane glass-3ft x 5ft" loading="lazy">
             <h2>Double pane glass-3ft x 5ft</h2>
             <p>This high-quality double pane glass measures 3 feet by 5 feet, perfect for small to medium-sized windows. It provides excellent insulation and noise reduction, making it ideal for residential and commercial applications.</p>
             <div id="paypal-container-1" class="paypal-button"></div>
@@ -153,7 +205,7 @@
 
         <!-- Product 2 -->
         <div class="product">
-            <img src="glass2.jpg" alt="Double pane glass-7ft x 10ft" loading="lazy">
+            <img src="glass2.jpg" srcset="glass2-small.jpg 480w, glass2.jpg 1024w" alt="Double pane glass-7ft x 10ft" loading="lazy">
             <h2>Double pane glass-7ft x 10ft</h2>
             <p>This large double pane glass measures 7 feet by 10 feet, suitable for spacious areas. It offers superior thermal insulation and soundproofing, making it a great choice for large windows and doors in both residential and commercial settings.</p>
             <div id="paypal-container-2" class="paypal-button"></div>
@@ -161,12 +213,15 @@
 
         <!-- Product 3 -->
         <div class="product">
-            <img src="glass3.jpg" alt="Double pane glass-20ft x 10ft" loading="lazy">
+            <img src="glass3.jpg" srcset="glass3-small.jpg 480w, glass3.jpg 1024w" alt="Double pane glass-20ft x 10ft" loading="lazy">
             <h2>Double pane glass-20ft x 10ft</h2>
             <p>This extra-large double pane glass measures 20 feet by 10 feet, ideal for large-scale projects. It provides exceptional insulation and noise reduction, making it perfect for commercial buildings, large windows, and architectural projects.</p>
             <div id="paypal-container-3" class="paypal-button"></div>
         </div>
     </div>
+
+
+
 
     <!-- PayPal SDK Script -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAAHM12uG09bH0tjPZGoq_3qwODTRuFwT-_56q9q7bAbdDqVzDNWCzOY5L5sBz5OXcuZ5U6Hwr8ue16j7c&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
@@ -190,6 +245,26 @@
         paypal.HostedButtons({
             hostedButtonId: "FYLU7U72KDXHU",
         }).render("#paypal-container-3");
+    </script>
+
+     <footer>
+        <p>&copy; 2025 Ideal Logistics Investment. All rights reserved.</p>
+        <p>Located in:
+            <a >Kasarani</a> |
+
+
+        </p>
+          <p>Payments:
+            <a >Family Bank</a> |
+            <a href="#">Kasarani</a> |
+
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("show");
+        }
     </script>
 </body>
 </html>
