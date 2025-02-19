@@ -30,6 +30,28 @@
             border-bottom: #555 3px solid;
             animation: fadeIn 2s ease-in-out;
         }
+        .logo img {
+            height: 60px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
         @keyframes fadeIn {
     from {
         opacity: 0;
@@ -100,6 +122,22 @@
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #333;
+                width: 100%;
+                text-align: center;
+            }
+            nav ul.show {
+                display: flex;
+            }
             header nav {
             float: none;
             text-align: center;
@@ -110,7 +148,7 @@
             }
             .product {
                 width: 100%;
-                margin: 20px 0;
+
             }
 
         }
@@ -128,6 +166,14 @@
         .paypal-button {
             text-align: center;
         }
+
+         footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -135,7 +181,7 @@
         <div class="container">
             <div id="branding">
                  <img src="logo.png" alt="Ideal Logistics Investment Logo" style="height: 60px;">
-             
+
             </div>
             <nav>
                 <ul>
