@@ -24,6 +24,23 @@
             border-bottom: #555 3px solid;
             animation: fadeIn 2s ease-in-out;
         }
+footer {
+           background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #555 3px solid;
+            animation: fadeIn 2s ease-in-out;
+        }
+         footer p {
+            color: #fff;
+            text-decoration: none;
+           text-align: center;
+            font-size: 16px;
+            list-style: none;
+              display: inline;
+            padding: 0 20px 0 20px;
+        }
         @keyframes fadeIn {
     from {
         opacity: 0;
