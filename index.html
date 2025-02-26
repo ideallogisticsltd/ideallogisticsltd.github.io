@@ -236,9 +236,35 @@
           
 
         </p>
+          <p> Visitors: <span id="visitor-count">120</span></p>
     </footer>
+    <script>
+        // Simple visitor counter using localStorage
+        function updateVisitorCount() {
+            // Check if localStorage is available
+            if (typeof(Storage) !== "undefined") {
+                // Get current count or start at 0
+                let count = localStorage.getItem('visitorCount') || 0;
+                // Increment count
+                count = parseInt(count) + 1;
+                // Update localStorage
+                localStorage.setItem('visitorCount', count);
+                // Display count
+                document.getElementById('visitor-count').textContent = count;
+            } else {
+                // Fallback if localStorage isn't supported
+                document.getElementById('visitor-count').textContent = "Counter not available";
+            }
+        }
+
+        // Run the counter when the page loads
+        window.onload = function() {
+            updateVisitorCount();
+        }
+    </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9549561561349380"
      crossorigin="anonymous"></script>
+    
 <!-- nt 
 <ins class="adsbygoogle"
      style="display:block"
