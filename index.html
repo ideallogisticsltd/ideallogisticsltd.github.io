@@ -190,21 +190,31 @@
             <img src="glass1.jpg" alt="Double pane glass-3ft x 5ft" loading="lazy">
             <h2>Double pane glass-3ft x 5ft</h2>
             <p>This high-quality double pane glass measures 3 feet by 5 feet, perfect for small to medium-sized windows. It provides excellent insulation and noise reduction, making it ideal for residential and commercial applications.</p>
-            <form action="https://www.paypal.com/ncp/payment/2LUPAB42TQ35S" method="post" target="paypal-iframe" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
-                <img src="https://www.paypalobjects.com/images/Debit_Credit.svg" alt="cards" />
-                <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-            </form>
+            <button class="pp-2LUPAB42TQ35S" onclick="openPayPal('https://www.paypal.com/ncp/payment/2LUPAB42TQ35S')">Buy Now</button>
         </div>
 
-        <!-- Add an iframe to display the PayPal payment page -->
-        <iframe name="paypal-iframe" style="display:none;"></iframe>
+        <!-- Add an iframe container -->
+        <div id="paypal-container" style="display:none; width:100%; height:500px;"></div>
 
         <!-- Rest of your products and forms -->
         <!-- ... -->
-
     </div>
-    
+
+    <script>
+        function openPayPal(url) {
+            const frameElement = document.createElement('iframe');
+            frameElement.src = url;
+            frameElement.frameBorder = 0;
+            frameElement.style.width = '100%';
+            frameElement.style.height = '500px';
+            frameElement.style.display = 'block';
+
+            const container = document.querySelector('#paypal-container');
+            container.innerHTML = ''; // Clear any existing content
+            container.appendChild(frameElement);
+            container.style.display = 'block'; // Make the iframe visible
+        }
+    </script>
 
     <footer>
         <p>&copy; 2025 Ideal Logistics Investment. All rights reserved.</p>
