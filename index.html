@@ -11,12 +11,12 @@
     <link rel="icon" type="image/jpg" href="logo.jpg">
     <!-- Matomo Tag Manager -->
     <script>
-        var _mtm = window._mtm = window._mtm || [];
-        _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-        (function() {
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.async=true; g.src='https://cdn.matomo.cloud/ideallogisticsinvestments.matomo.cloud/container_umLEjzrC.js'; s.parentNode.insertBefore(g,s);
-        })();
+      var _mtm = window._mtm = window._mtm || [];
+      _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+      (function() {
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src='https://cdn.matomo.cloud/ideallogisticsinvestments.matomo.cloud/container_umLEjzrC.js'; s.parentNode.insertBefore(g,s);
+      })();
     </script>
     <!-- End Matomo Tag Manager -->
     <style>
@@ -43,32 +43,33 @@
             animation: fadeIn 2s ease-in-out;
         }
         footer {
-            background: #333;
+           background: #333;
             color: #fff;
             padding-top: 30px;
             min-height: 70px;
             border-bottom: #555 3px solid;
             animation: fadeIn 2s ease-in-out;
         }
-        footer p {
+         footer p {
             color: #fff;
             text-decoration: none;
-            text-align: center;
+           text-align: center;
             font-size: 16px;
             list-style: none;
-            display: inline;
+              display: inline;
             padding: 0 20px 0 20px;
         }
+      
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
         header a {
             color: #fff;
             text-decoration: none;
@@ -103,32 +104,33 @@
         }
         .product {
             background: #fff;
-            margin: 10px;
+             margin: 10px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: calc(25% - 40px);
+              width: calc(25% - 40px);
             box-sizing: border-box;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            opacity: 0;
-            animation: fadeInProduct 1s ease forwards;
+                opacity: 0;
+    animation: fadeInProduct 1s ease forwards;
         }
         @keyframes fadeInProduct {
-            to {
-                opacity: 1;
-            }
-        }
+    to {
+        opacity: 1;
+    }
+}
+
         .product:hover {
             transform: scale(1.05) translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
         @media (max-width: 768px) {
             header nav {
-                float: none;
-                text-align: center;
-                margin-top: 20px;
+            float: none;
+            text-align: center;
+            margin-top: 20px;
             }
             .container {
-                flex-direction: column;
+            flex-direction: column;
             }
             .product {
                 width: 100%;
@@ -164,46 +166,13 @@
             line-height: 1.25rem;
             cursor: pointer;
         }
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-    <header>
+    <header >
         <div class="container">
             <div id="branding">
-                <img src="logo.png" alt="Ideal Logistics Investment Logo" style="height: 60px;">
+               <img src="logo.png" alt="Ideal Logistics Investment Logo" style="height: 60px;">
             </div>
             <nav>
                 <ul>
@@ -221,111 +190,33 @@
             <img src="glass1.jpg" alt="Double pane glass-3ft x 5ft" loading="lazy">
             <h2>Double pane glass-3ft x 5ft</h2>
             <p>This high-quality double pane glass measures 3 feet by 5 feet, perfect for small to medium-sized windows. It provides excellent insulation and noise reduction, making it ideal for residential and commercial applications.</p>
-            <button class="pp-2LUPAB42TQ35S" onclick="openModal('modal1')">Buy Now</button>
-            <img src="https://www.paypalobjects.com/images/Debit_Credit.svg" alt="cards" />
-            <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product">
-            <img src="glass2.jpg" alt="Double pane glass-7ft x 10ft" loading="lazy">
-            <h2>Double pane glass-7ft x 10ft</h2>
-            <p>This large double pane glass measures 7 feet by 10 feet, suitable for spacious areas. It offers superior thermal insulation and soundproofing, making it a great choice for large windows and doors in both residential and commercial settings.</p>
-            <button class="pp-2LUPAB42TQ35S" onclick="openModal('modal2')">Buy Now</button>
-            <img src="https://www.paypalobjects.com/images/Debit_Credit.svg" alt="cards" />
-            <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product">
-            <img src="glass3.jpg" alt="Double pane glass-20ft x 10ft" loading="lazy">
-            <h2>Double pane glass-20ft x 10ft</h2>
-            <p>This extra-large double pane glass measures 20 feet by 10 feet, ideal for large-scale projects. It provides exceptional insulation and noise reduction, making it perfect for commercial buildings, large windows, and architectural projects.</p>
-            <button class="pp-2LUPAB42TQ35S" onclick="openModal('modal3')">Buy Now</button>
-            <img src="https://www.paypalobjects.com/images/Debit_Credit.svg" alt="cards" />
-            <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product">
-            <img src="glass2.jpg" alt="Double pane glass-1ft x 5ft" loading="lazy">
-            <h2>Double pane glass-1ft x 5ft</h2>
-            <p>This compact double pane glass measures 1 foot by 5 feet, perfect for small windows and doors. It provides good insulation and noise reduction, making it suitable for residential and small commercial applications.</p>
-            <button class="pp-2LUPAB42TQ35S" onclick="openModal('modal4')">Buy Now</button>
-            <img src="https://www.paypalobjects.com/images/Debit_Credit.svg" alt="cards" />
-            <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-        </div>
-    </div>
-
-    <!-- Modal 1 -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <form action="https://www.paypal.com/ncp/payment/2LUPAB42TQ35S" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+            <form action="https://www.paypal.com/ncp/payment/2LUPAB42TQ35S" method="post" target="paypal-iframe" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
                 <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
                 <img src="https://www.paypalobjects.com/images/Debit_Credit.svg" alt="cards" />
                 <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
             </form>
         </div>
-    </div>
 
-    <!-- Modal 2 -->
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <form action="https://www.paypal.com/ncp/payment/2LUPAB42TQ35S" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
-                <img src="https://www.paypalobjects.com/images/Debit_Credit.svg" alt="cards" />
-                <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-            </form>
-        </div>
-    </div>
+        <!-- Add an iframe to display the PayPal payment page -->
+        <iframe name="paypal-iframe" style="display:none;"></iframe>
 
-    <!-- Modal 3 -->
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <form action="https://www.paypal.com/ncp/payment/2LUPAB42TQ35S" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
-               
-            </form>
-        </div>
-    </div>
+        <!-- Rest of your products and forms -->
+        <!-- ... -->
 
-    <!-- Modal 4 -->
-    <div id="modal4" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal4')">&times;</span>
-            <form action="https://www.paypal.com/ncp/payment/2LUPAB42TQ35S" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
-              
-            </form>
-        </div>
     </div>
+    
 
     <footer>
         <p>&copy; 2025 Ideal Logistics Investment. All rights reserved.</p>
         <p> Located in:
-            <a>Kasarani</a>
+            <a >Kasarani</a>
         </p>
         <p> Developed by:
-            <a href="https://everlynetech.github.io/">&copy;</a>
-            <a>Kevin Nandi - kevinnandi1631@gmail.com</a>
+            <a href="https://everlynetech.github.io/">&copy; </a> 
+            <a >Kevin Nandi - kevinnandi1631@gmail.com </a>
         </p>
-        <p> Visitors: <img src="https://www.free-website-hit-counter.com/zc.php?d=9&id=5986&s=18" border='0'>
+        <p> Visitors: <img src="https://www.free-website-hit-counter.com/zc.php?d=9&id=5986&s=18" border='0' >
         </p>
     </footer>
-
-    <script>
-        function openModal(modalId) {
-            var modal = document.getElementById(modalId);
-            modal.style.display = "block";
-        }
-
-        function closeModal(modalId) {
-            var modal = document.getElementById(modalId);
-            modal.style.display = "none";
-        }
-    </script>
 </body>
 </html>
