@@ -190,12 +190,26 @@
             <img src="glass1.jpg" alt="Double pane glass-3ft x 5ft" loading="lazy">
             <h2>Double pane glass-3ft x 5ft</h2>
             <p>This high-quality double pane glass measures 3 feet by 5 feet, perfect for small to medium-sized windows. It provides excellent insulation and noise reduction, making it ideal for residential and commercial applications.</p>
-            <form action="https://v3-uat.jengapgw.io/processPayment" method="post" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input type="hidden" name="publicKey" value="1/w4NylLIyURi3lcZfokP/TGT9UXxgDdhikJVZD3TC3891yAQTa9cyzUFr4LINHFZhOgVr1EDnsisoFbUzXABw">
-                <input type="hidden" name="amount" value="700">
-                <input type="hidden" name="currency" value="USD">
-                <input type="hidden" name="description" value="Double pane glass-3ft x 5ft">
-                <input type="hidden" name="reference" value="UNIQUE_REFERENCE_1">
+            <form id="submitcheckout" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input type="hidden" id="token" name="token" value="1/w4NylLIyURi3lcZfokP/TGT9UXxgDdhikJVZD3TC3891yAQTa9cyzUFr4LINHFZhOgVr1EDnsisoFbUzXABw">
+                <input type="hidden" id="merchantCode" name="merchantCode" value="4313921690">
+                <input type="hidden" id="currency" name="currency" value="USD">
+                <input type="hidden" id="orderAmount" name="orderAmount" value="PRICE_1">
+                <input type="hidden" id="orderReference" name="orderReference" value="UNIQUE_REFERENCE_1">
+                <input type="hidden" id="productType" name="productType" value="Double Pane Glass">
+                <input type="hidden" id="productDescription" name="productDescription" value="Double pane glass-3ft x 5ft">
+                <input type="hidden" id="paymentTimeLimit" name="paymentTimeLimit" value="3600">
+                <input type="hidden" id="customerFirstName" name="customerFirstName" value="John">
+                <input type="hidden" id="customerLastName" name="customerLastName" value="Doe">
+                <input type="hidden" id="customerPostalCodeZip" name="customerPostalCodeZip" value="12345">
+                <input type="hidden" id="customerAddress" name="customerAddress" value="123 Main St">
+                <input type="hidden" id="customerEmail" name="customerEmail" value="john.doe@example.com">
+                <input type="hidden" id="customerPhone" name="customerPhone" value="+1234567890">
+                <input type="hidden" id="extraData" name="extraData" value="">
+                <input type="hidden" id="callbackUrl" name="callbackUrl" value="YOUR_CALLBACK_URL">
+                <input type="hidden" id="countryCode" name="countryCode" value="KE">
+                <input type="hidden" id="secondaryReference" name="secondaryReference" value="SECONDARY_REF_1">
+                <input type="hidden" id="signature" name="signature" value="YOUR_SIGNATURE">
                 <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
             </form>
         </div>
@@ -205,12 +219,26 @@
             <img src="glass2.jpg" alt="Double pane glass-7ft x 10ft" loading="lazy">
             <h2>Double pane glass-7ft x 10ft</h2>
             <p>This large double pane glass measures 7 feet by 10 feet, suitable for spacious areas. It offers superior thermal insulation and soundproofing, making it a great choice for large windows and doors in both residential and commercial settings.</p>
-            <form action="https://v3-uat.jengapgw.io/processPayment" method="post" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input type="hidden" name="publicKey" value="1/w4NylLIyURi3lcZfokP/TGT9UXxgDdhikJVZD3TC3891yAQTa9cyzUFr4LINHFZhOgVr1EDnsisoFbUzXABw">
-                <input type="hidden" name="amount" value="3500">
-                <input type="hidden" name="currency" value="USD">
-                <input type="hidden" name="description" value="Double pane glass-7ft x 10ft">
-                <input type="hidden" name="reference" value="UNIQUE_REFERENCE_2">
+            <form id="submitcheckout" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input type="hidden" id="token" name="token" value="1/w4NylLIyURi3lcZfokP/TGT9UXxgDdhikJVZD3TC3891yAQTa9cyzUFr4LINHFZhOgVr1EDnsisoFbUzXABw">
+                <input type="hidden" id="merchantCode" name="merchantCode" value="4313921690">
+                <input type="hidden" id="currency" name="currency" value="USD">
+                <input type="hidden" id="orderAmount" name="orderAmount" value="PRICE_2">
+                <input type="hidden" id="orderReference" name="orderReference" value="UNIQUE_REFERENCE_2">
+                <input type="hidden" id="productType" name="productType" value="Double Pane Glass">
+                <input type="hidden" id="productDescription" name="productDescription" value="Double pane glass-7ft x 10ft">
+                <input type="hidden" id="paymentTimeLimit" name="paymentTimeLimit" value="3600">
+                <input type="hidden" id="customerFirstName" name="customerFirstName" value="John">
+                <input type="hidden" id="customerLastName" name="customerLastName" value="Doe">
+                <input type="hidden" id="customerPostalCodeZip" name="customerPostalCodeZip" value="12345">
+                <input type="hidden" id="customerAddress" name="customerAddress" value="123 Main St">
+                <input type="hidden" id="customerEmail" name="customerEmail" value="john.doe@example.com">
+                <input type="hidden" id="customerPhone" name="customerPhone" value="+1234567890">
+                <input type="hidden" id="extraData" name="extraData" value="">
+                <input type="hidden" id="callbackUrl" name="callbackUrl" value="YOUR_CALLBACK_URL">
+                <input type="hidden" id="countryCode" name="countryCode" value="KE">
+                <input type="hidden" id="secondaryReference" name="secondaryReference" value="SECONDARY_REF_2">
+                <input type="hidden" id="signature" name="signature" value="YOUR_SIGNATURE">
                 <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
             </form>
         </div>
@@ -220,12 +248,26 @@
             <img src="glass3.jpg" alt="Double pane glass-20ft x 10ft" loading="lazy">
             <h2>Double pane glass-20ft x 10ft</h2>
             <p>This extra-large double pane glass measures 20 feet by 10 feet, ideal for large-scale projects. It provides exceptional insulation and noise reduction, making it perfect for commercial buildings, large windows, and architectural projects.</p>
-            <form action="https://v3-uat.jengapgw.io/processPayment" method="post" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input type="hidden" name="publicKey" value="1/w4NylLIyURi3lcZfokP/TGT9UXxgDdhikJVZD3TC3891yAQTa9cyzUFr4LINHFZhOgVr1EDnsisoFbUzXABw">
-                <input type="hidden" name="amount" value="8000">
-                <input type="hidden" name="currency" value="USD">
-                <input type="hidden" name="description" value="Double pane glass-20ft x 10ft">
-                <input type="hidden" name="reference" value="UNIQUE_REFERENCE_3">
+            <form id="submitcheckout" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input type="hidden" id="token" name="token" value="1/w4NylLIyURi3lcZfokP/TGT9UXxgDdhikJVZD3TC3891yAQTa9cyzUFr4LINHFZhOgVr1EDnsisoFbUzXABw">
+                <input type="hidden" id="merchantCode" name="merchantCode" value="4313921690">
+                <input type="hidden" id="currency" name="currency" value="USD">
+                <input type="hidden" id="orderAmount" name="orderAmount" value="PRICE_3">
+                <input type="hidden" id="orderReference" name="orderReference" value="UNIQUE_REFERENCE_3">
+                <input type="hidden" id="productType" name="productType" value="Double Pane Glass">
+                <input type="hidden" id="productDescription" name="productDescription" value="Double pane glass-20ft x 10ft">
+                <input type="hidden" id="paymentTimeLimit" name="paymentTimeLimit" value="3600">
+                <input type="hidden" id="customerFirstName" name="customerFirstName" value="John">
+                <input type="hidden" id="customerLastName" name="customerLastName" value="Doe">
+                <input type="hidden" id="customerPostalCodeZip" name="customerPostalCodeZip" value="12345">
+                <input type="hidden" id="customerAddress" name="customerAddress" value="123 Main St">
+                <input type="hidden" id="customerEmail" name="customerEmail" value="john.doe@example.com">
+                <input type="hidden" id="customerPhone" name="customerPhone" value="+1234567890">
+                <input type="hidden" id="extraData" name="extraData" value="">
+                <input type="hidden" id="callbackUrl" name="callbackUrl" value="YOUR_CALLBACK_URL">
+                <input type="hidden" id="countryCode" name="countryCode" value="KE">
+                <input type="hidden" id="secondaryReference" name="secondaryReference" value="SECONDARY_REF_3">
+                <input type="hidden" id="signature" name="signature" value="YOUR_SIGNATURE">
                 <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
             </form>
         </div>
@@ -235,28 +277,23 @@
             <img src="glass2.jpg" alt="Double pane glass-1ft x 5ft" loading="lazy">
             <h2>Double pane glass-1ft x 5ft</h2>
             <p>This compact double pane glass measures 1 foot by 5 feet, perfect for small windows and doors. It provides good insulation and noise reduction, making it suitable for residential and small commercial applications.</p>
-            <form action="https://v3-uat.jengapgw.io/processPayment" method="post" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input type="hidden" name="publicKey" value="1/w4NylLIyURi3lcZfokP/TGT9UXxgDdhikJVZD3TC3891yAQTa9cyzUFr4LINHFZhOgVr1EDnsisoFbUzXABw">
-                <input type="hidden" name="amount" value="1">
-                <input type="hidden" name="currency" value="USD">
-                <input type="hidden" name="description" value="Double pane glass-1ft x 5ft">
-                <input type="hidden" name="reference" value="UNIQUE_REFERENCE_4">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
-            </form>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Ideal Logistics Investment. All rights reserved.</p>
-        <p> Located in:
-            <a>Kasarani</a>
-        </p>
-        <p> Developed by:
-            <a href="https://everlynetech.github.io/">©</a>
-            <a>Kevin Nandi - kevinnandi1631@gmail.com</a>
-        </p>
-        <p> Visitors: <img src="https://www.free-website-hit-counter.com/zc.php?d=9&id=5986&s=18" border='0' >
-        </p>
-    </footer>
-</body>
-</html>
+            <form id="submitcheckout" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input type="hidden" id="token" name="token" value="1/w4NylLIyURi3lcZfokP/TGT9UXxgDdhikJVZD3TC3891yAQTa9cyzUFr4LINHFZhOgVr1EDnsisoFbUzXABw">
+                <input type="hidden" id="merchantCode" name="merchantCode" value="4313921690">
+                <input type="hidden" id="currency" name="currency" value="USD">
+                <input type="hidden" id="orderAmount" name="orderAmount" value="PRICE_4">
+                <input type="hidden" id="orderReference" name="orderReference" value="UNIQUE_REFERENCE_4">
+                <input type="hidden" id="productType" name="productType" value="Double Pane Glass">
+                <input type="hidden" id="productDescription" name="productDescription" value="Double pane glass-1ft x 5ft">
+                <input type="hidden" id="paymentTimeLimit" name="paymentTimeLimit" value="3600">
+                <input type="hidden" id="customerFirstName" name="customerFirstName" value="John">
+                <input type="hidden" id="customerLastName" name="customerLastName" value="Doe">
+                <input type="hidden" id="customerPostalCodeZip" name="customerPostalCodeZip" value="12345">
+                <input type="hidden" id="customerAddress" name="customerAddress" value="123 Main St">
+                <input type="hidden" id="customerEmail" name="customerEmail" value="john.doe@example.com">
+                <input type="hidden" id="customerPhone" name="customerPhone" value="+1234567890">
+                <input type="hidden" id="extraData" name="extraData" value="">
+                <input type="hidden" id="callbackUrl" name="callbackUrl" value="YOUR_CALLBACK_URL">
+                <input type="hidden" id="countryCode" name="countryCode" value="KE">
+                <input type="hidden" id="secondaryReference" name="secondaryReference" value="SECONDARY_REF_4">
+                <input type="hidden
