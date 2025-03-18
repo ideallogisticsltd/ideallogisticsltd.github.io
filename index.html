@@ -1,26 +1,327 @@
-
-    <html>
-    <body onload="document.paymentForm.submit()">
-        <form action="https://v3-uat.jengapgw.io/processPayment" method="POST" name="paymentForm">
-    <input type="hidden" name="token" value="eyJhbGciOiJSUzUxMiJ9.eyJ0b2tlblR5cGUiOiJNRVJDSEFOVCIsImVudiI6IlVBVCIsImFjY291bnQiOiJ4Z1ZxY1FkRnJPbW9uZmlGQWhobE0xdmJCTXFhM0RSMzd5TXQ5LzFjbFBnZWQvOG5qOUFIQWJRWEZ3WXN4TCtPUitVUkZvcGJOTEFRSFJDbFlBaUxBZTByV3B5b3RBM1RpVjY2WmVBQ28yb0grdFJqaHBHS1JFa0dEZ3BmbWZMTGxnd0dxY09ra3Y0NmVsdDlZK0dFVTAxM2pVWkVXYVMwVHd4NDk3b3lIdUQ2SUJveDhpZFJHVGpUVHhDK2dBdE01UFh6RGFtdlJ1U2x5Z1hCOE1aK0NwT0Z4N0YxZnN2NDg3ejhPL21pNkRYUk5WSS9KMDNPZFliUlZ1TklaYkphT0wzOUJlQ25DRE02U1U3S3JPMmtNS09wcS9vYzlJMnB2SVFGWUNDUC92dGtROS9PV1NVRkFPYkQvL05YbFdaUTVYSDRXMVNEa2hvdVhIcFJrR05xWXQzVmlEcUNkV0FFNWg0TE9Bci9OK0JweFJPNk9CaG1vVWo2TDlQWmpyQmRSU0hhWituc1AxTy9lR3Evekt0TWhhcXpvODdIUmZqQk5zL2c4Si9WRmdxNHlCVWoxc2s1OWF3dnczWjNSVUxZdGF0dmhMU081TGVjaXJuN29rSlAwR2xFUm9NWk1LKzdQVERNTTRCOElFNWxLcnhERTcvbm1tUlZESzlCcHBHZzNSU3BFRHJ4WHhSSFB4VE5seFNoUngyeiIsImlhdCI6MTc0MjI4NTE0OSwiZXhwIjoxNzQyMjg2MDQ5fQ.k0RFEfew8DDuI2T32De7AmVK_6R2p7EMMjKnnGavwSc28X_rBupeiC5tUr90b2bWXcbqUG-6qlNgG8QOIMn6Kllp2mx9VDeSdySB6z0icJ3X_Ej_fDhl8hbIBeJDelJOpl3x6L8UytByjHtnS6IY6t8n7WutoDFLWibRwtiAEQuD8mAF4fr6mymmYDg6TloxIpUX__aQg1x6WS0quYZf5nv3Ds3taAGsbVOclEa8J7tRQe9imFfivgO7w7Dq7EahkafnyvsyJwWUUMIe0LNYxqMx6mHr_QRsb6QYwBKR2utAYY0BgBJ1A54B5QxH5L-te3W2kwYoUR3Ju4iARU-uiQ">
-<input type="hidden" name="merchantCode" value="4313921690">
-<input type="hidden" name="currency" value="KES">
-<input type="hidden" name="orderAmount" value="10">
-<input type="hidden" name="orderReference" value="ORD1742285149">
-<input type="hidden" name="productType" value="Product">
-<input type="hidden" name="productDescription" value="Sample Item Purchase">
-<input type="hidden" name="paymentTimeLimit" value="15mins">
-<input type="hidden" name="customerFirstName" value="Test">
-<input type="hidden" name="customerLastName" value="User">
-<input type="hidden" name="customerPostalCodeZip" value="00100">
-<input type="hidden" name="customerAddress" value="Nairobi">
-<input type="hidden" name="customerEmail" value="test@example.com">
-<input type="hidden" name="customerPhone" value="254746128977">
-<input type="hidden" name="callbackUrl" value="http://localhost:5000/callback">
-<input type="hidden" name="countryCode" value="KE">
-<input type="hidden" name="signature" value="297aadf0c5c55234b4d32b0aa4fba2b6">
-
-        </form>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-9549561561349380">
+    <title>Ideal Logistics Investment</title>
+    <link rel="icon" type="image/png" href="logo.png">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+ 
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
     
+    <!-- Matomo script -->
+
+    <!-- Matomo Tag Manager -->
+    <script>
+      var _mtm = window._mtm = window._mtm || [];
+      _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+      (function() {
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src='https://cdn.matomo.cloud/ideallogisticsinvestments.matomo.cloud/container_umLEjzrC.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Tag Manager -->
+    <style>
+        body {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: auto;
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #555 3px solid;
+            animation: fadeIn 2s ease-in-out;
+        }
+        footer {
+           background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #555 3px solid;
+            animation: fadeIn 2s ease-in-out;
+        }
+         footer p {
+            color: #fff;
+            text-decoration: none;
+           text-align: center;
+            font-size: 16px;
+            list-style: none;
+              display: inline;
+            padding: 0 20px 0 20px;
+        }
+      
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .product {
+            background: #fff;
+             margin: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              width: calc(25% - 40px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                opacity: 0;
+    animation: fadeInProduct 1s ease forwards;
+        }
+        @keyframes fadeInProduct {
+    to {
+        opacity: 1;
+    }
+}
+
+        .product:hover {
+            transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            header nav {
+            float: none;
+            text-align: center;
+            margin-top: 20px;
+            }
+            .container {
+            flex-direction: column;
+            }
+            .product {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .product h2 {
+            margin: 0 0 10px 0;
+        }
+        .product p {
+            margin: 0 0 20px 0;
+        }
+        .paypal-button {
+            text-align: center;
+        }
+        .pp-2LUPAB42TQ35S {
+            text-align: center;
+            border: none;
+            border-radius: 0.25rem;
+            min-width: 11.625rem;
+            padding: 0 2rem;
+            height: 2.625rem;
+            font-weight: bold;
+            background-color: #FFD140;
+            color: #000000;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header >
+        <div class="container">
+            <div id="branding">
+               <img src="logo.png" alt="Ideal Logistics Investment Logo" style="height: 60px;">
+                
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="glass1.jpg" alt="Double pane glass-3ft x 5ft" loading="lazy">
+            <h2>Double pane glass-3ft x 5ft</h2>
+            <p>This high-quality double pane glass measures 3 feet by 5 feet, perfect for small to medium-sized windows. It provides excellent insulation and noise reduction, making it ideal for residential and commercial applications.</p>
+            <form id="submitcheckout" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input type="hidden" id="token" name="token" value="eyJhbGciOiJSUzUxMiJ9.eyJ0b2tlblR5cGUiOiJNRVJDSEFOVCIsImVudiI6IlVBVCIsImFjY291bnQiOiJvSjBPMGVweENzWGV1MU1pelZyN0VrZ1BIeE5jc3VsRlZ4TDdITHBobkhEaGZDQ2pndWtJbmdHV1kvYWxzTVZ0dFN0RTdIUUc4UHhoZ011QTJ4SVFzNWtCMVdja21YTnN4a0NpVjZXWXF0bzRwaFNES3d2OXRKS1o4ZXpCWklXaWlsRFZ3NDdXWGVyWFZXb0FQS3YzN2RXUnBGdHVsanRmSGNrVU1GUDlPZEZvQit4T3dGN1l3akd2ci96VjVwL0g4RjA1V1Rra3YxQWlHWU9XZVN5ZFp5SlZwbWxReithaWZtdWZ5S0pMSG5hbXdhVktZTjliblU5ZnNGZHRaTnFnVlp1ZEoxWmY1MEFoNUl4Q1I3UEVNcXJMM2pBV1cxdUdqa3orWHpZS2pocFdESTNpb25VMlQ3enpxWE0zZTVtMXVMeHAzT1NTSTNHSkxOTVNUekpsK0lJZUhhdWJxWHZmb1RyZEJ2R2l3eXFwdWt5VnNOQzBoMC9xd0FaWklMNGhSY1R4RVZiV24vZC9tVXE1NmVFVEJNYVoyVVR2dm1sakNLaW5uZCtQWU5qVGJLVVFJb0ExOVFhMWY1OFU3VUwvaDZUL3RrazdsUFhWQUxFSVY2Y29mMzU5NXA3NWY0bW5LM0p4dDViak9vM1U3bUNpczcvUXBIMS9ROUpMTXkya1hraDRkdWh6TXhxdTlUd3Mxd0VmL3ZzdiIsImlhdCI6MTc0MjI4NjM2OCwiZXhwIjoxNzQyMjg3MjY4fQ.XO4nFVKiB_YAaiCbf9kR5POIEeyQQJysPS9_bm-Q-oIEiXmFA9NS6DueC4KfkL90BCULY1lStYRsGYGD6RiooBaIAQRs9qYAFs3eAo9bJ46SV13TA_4qXQCwWMHun1kJa1nHmX-sK3DfQqcuQ5W9qUUbNdfihSNGKKJj0dhnNvbBWoAc4Iktb0uUYiMLlzxwxCv3yQ1tXeI_mTJYwVKHNoux7rXbmQeQBwB7MLMS-yjmRtzYV_SJvo02o3lj6Ra00PremCmMMP-KgqvJqjedX7JmCAbl090XsczhNPy_b1Nh1hdystyyDngcHFvuo2Lbm2ubH4ySDZq1_vG7ipw_XQ
+">
+                <input type="hidden" id="merchantCode" name="merchantCode" value="4313921690">
+                <input type="hidden" id="currency" name="currency" value="USD">
+                <input type="hidden" id="orderAmount" name="orderAmount" value="700">
+                <input type="hidden" id="orderReference" name="orderReference" value="4yTr67jab5HjFrl">
+                <input type="hidden" id="productType" name="productType" value="Double Pane Glass">
+                <input type="hidden" id="productDescription" name="productDescription" value="Double pane glass-3ft x 5ft">
+                <input type="hidden" id="paymentTimeLimit" name="paymentTimeLimit" value="3600">
+                <input type="hidden" id="customerFirstName" name="customerFirstName" value="John">
+                <input type="hidden" id="customerLastName" name="customerLastName" value="Doe">
+                <input type="hidden" id="customerPostalCodeZip" name="customerPostalCodeZip" value="12345">
+                <input type="hidden" id="customerAddress" name="customerAddress" value="123 Main St">
+                <input type="hidden" id="customerEmail" name="customerEmail" value="johndoe@gmail.com">
+                <input type="hidden" id="customerPhone" name="customerPhone" value="254746128977">
+                <input type="hidden" id="extraData" name="extraData" value="">
+                <input type="hidden" id="callbackUrl" name="callbackUrl" value="YOUR_CALLBACK_URL">
+                <input type="hidden" id="countryCode" name="countryCode" value="KE">
+                <input type="hidden" id="secondaryReference" name="secondaryReference" value="SECONDARY_REF_1">
+                <input type="hidden" id="signature" name="signature" value="YOUR_SIGNATURE">
+                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
+            </form>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="glass2.jpg" alt="Double pane glass-7ft x 10ft" loading="lazy">
+            <h2>Double pane glass-7ft x 10ft</h2>
+            <p>This large double pane glass measures 7 feet by 10 feet, suitable for spacious areas. It offers superior thermal insulation and soundproofing, making it a great choice for large windows and doors in both residential and commercial settings.</p>
+            <form id="submitcheckout" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input type="hidden" id="token" name="token" value="eyJhbGciOiJSUzUxMiJ9.eyJ0b2tlblR5cGUiOiJNRVJDSEFOVCIsImVudiI6IlVBVCIsImFjY291bnQiOiJvSjBPMGVweENzWGV1MU1pelZyN0VrZ1BIeE5jc3VsRlZ4TDdITHBobkhEaGZDQ2pndWtJbmdHV1kvYWxzTVZ0dFN0RTdIUUc4UHhoZ011QTJ4SVFzNWtCMVdja21YTnN4a0NpVjZXWXF0bzRwaFNES3d2OXRKS1o4ZXpCWklXaWlsRFZ3NDdXWGVyWFZXb0FQS3YzN2RXUnBGdHVsanRmSGNrVU1GUDlPZEZvQit4T3dGN1l3akd2ci96VjVwL0g4RjA1V1Rra3YxQWlHWU9XZVN5ZFp5SlZwbWxReithaWZtdWZ5S0pMSG5hbXdhVktZTjliblU5ZnNGZHRaTnFnVlp1ZEoxWmY1MEFoNUl4Q1I3UEVNcXJMM2pBV1cxdUdqa3orWHpZS2pocFdESTNpb25VMlQ3enpxWE0zZTVtMXVMeHAzT1NTSTNHSkxOTVNUekpsK0lJZUhhdWJxWHZmb1RyZEJ2R2l3eXFwdWt5VnNOQzBoMC9xd0FaWklMNGhSY1R4RVZiV24vZC9tVXE1NmVFVEJNYVoyVVR2dm1sakNLaW5uZCtQWU5qVGJLVVFJb0ExOVFhMWY1OFU3VUwvaDZUL3RrazdsUFhWQUxFSVY2Y29mMzU5NXA3NWY0bW5LM0p4dDViak9vM1U3bUNpczcvUXBIMS9ROUpMTXkya1hraDRkdWh6TXhxdTlUd3Mxd0VmL3ZzdiIsImlhdCI6MTc0MjI4NjM2OCwiZXhwIjoxNzQyMjg3MjY4fQ.XO4nFVKiB_YAaiCbf9kR5POIEeyQQJysPS9_bm-Q-oIEiXmFA9NS6DueC4KfkL90BCULY1lStYRsGYGD6RiooBaIAQRs9qYAFs3eAo9bJ46SV13TA_4qXQCwWMHun1kJa1nHmX-sK3DfQqcuQ5W9qUUbNdfihSNGKKJj0dhnNvbBWoAc4Iktb0uUYiMLlzxwxCv3yQ1tXeI_mTJYwVKHNoux7rXbmQeQBwB7MLMS-yjmRtzYV_SJvo02o3lj6Ra00PremCmMMP-KgqvJqjedX7JmCAbl090XsczhNPy_b1Nh1hdystyyDngcHFvuo2Lbm2ubH4ySDZq1_vG7ipw_XQ
+">
+                <input type="hidden" id="merchantCode" name="merchantCode" value="4313921690">
+                <input type="hidden" id="currency" name="currency" value="USD">
+                <input type="hidden" id="orderAmount" name="orderAmount" value="3500">
+                <input type="hidden" id="orderReference" name="orderReference" value="4yTr67jab5HjFri">
+                <input type="hidden" id="productType" name="productType" value="Double Pane Glass">
+                <input type="hidden" id="productDescription" name="productDescription" value="Double pane glass-7ft x 10ft">
+                <input type="hidden" id="paymentTimeLimit" name="paymentTimeLimit" value="3600">
+                <input type="hidden" id="customerFirstName" name="customerFirstName" value="John">
+                <input type="hidden" id="customerLastName" name="customerLastName" value="Doe">
+                <input type="hidden" id="customerPostalCodeZip" name="customerPostalCodeZip" value="12345">
+                <input type="hidden" id="customerAddress" name="customerAddress" value="123 Main St">
+                <input type="hidden" id="customerEmail" name="customerEmail" value="johndoe@gmail.com">
+                <input type="hidden" id="customerPhone" name="customerPhone" value="254746128977">
+                <input type="hidden" id="extraData" name="extraData" value="">
+                <input type="hidden" id="callbackUrl" name="callbackUrl" value="YOUR_CALLBACK_URL">
+                <input type="hidden" id="countryCode" name="countryCode" value="KE">
+                <input type="hidden" id="secondaryReference" name="secondaryReference" value="SECONDARY_REF_2">
+                <input type="hidden" id="signature" name="signature" value="YOUR_SIGNATURE">
+                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
+            </form>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="glass3.jpg" alt="Double pane glass-20ft x 10ft" loading="lazy">
+            <h2>Double pane glass-20ft x 10ft</h2>
+            <p>This extra-large double pane glass measures 20 feet by 10 feet, ideal for large-scale projects. It provides exceptional insulation and noise reduction, making it perfect for commercial buildings, large windows, and architectural projects.</p>
+            <form id="submitcheckout" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input type="hidden" id="token" name="token" value="eyJhbGciOiJSUzUxMiJ9.eyJ0b2tlblR5cGUiOiJNRVJDSEFOVCIsImVudiI6IlVBVCIsImFjY291bnQiOiJvSjBPMGVweENzWGV1MU1pelZyN0VrZ1BIeE5jc3VsRlZ4TDdITHBobkhEaGZDQ2pndWtJbmdHV1kvYWxzTVZ0dFN0RTdIUUc4UHhoZ011QTJ4SVFzNWtCMVdja21YTnN4a0NpVjZXWXF0bzRwaFNES3d2OXRKS1o4ZXpCWklXaWlsRFZ3NDdXWGVyWFZXb0FQS3YzN2RXUnBGdHVsanRmSGNrVU1GUDlPZEZvQit4T3dGN1l3akd2ci96VjVwL0g4RjA1V1Rra3YxQWlHWU9XZVN5ZFp5SlZwbWxReithaWZtdWZ5S0pMSG5hbXdhVktZTjliblU5ZnNGZHRaTnFnVlp1ZEoxWmY1MEFoNUl4Q1I3UEVNcXJMM2pBV1cxdUdqa3orWHpZS2pocFdESTNpb25VMlQ3enpxWE0zZTVtMXVMeHAzT1NTSTNHSkxOTVNUekpsK0lJZUhhdWJxWHZmb1RyZEJ2R2l3eXFwdWt5VnNOQzBoMC9xd0FaWklMNGhSY1R4RVZiV24vZC9tVXE1NmVFVEJNYVoyVVR2dm1sakNLaW5uZCtQWU5qVGJLVVFJb0ExOVFhMWY1OFU3VUwvaDZUL3RrazdsUFhWQUxFSVY2Y29mMzU5NXA3NWY0bW5LM0p4dDViak9vM1U3bUNpczcvUXBIMS9ROUpMTXkya1hraDRkdWh6TXhxdTlUd3Mxd0VmL3ZzdiIsImlhdCI6MTc0MjI4NjM2OCwiZXhwIjoxNzQyMjg3MjY4fQ.XO4nFVKiB_YAaiCbf9kR5POIEeyQQJysPS9_bm-Q-oIEiXmFA9NS6DueC4KfkL90BCULY1lStYRsGYGD6RiooBaIAQRs9qYAFs3eAo9bJ46SV13TA_4qXQCwWMHun1kJa1nHmX-sK3DfQqcuQ5W9qUUbNdfihSNGKKJj0dhnNvbBWoAc4Iktb0uUYiMLlzxwxCv3yQ1tXeI_mTJYwVKHNoux7rXbmQeQBwB7MLMS-yjmRtzYV_SJvo02o3lj6Ra00PremCmMMP-KgqvJqjedX7JmCAbl090XsczhNPy_b1Nh1hdystyyDngcHFvuo2Lbm2ubH4ySDZq1_vG7ipw_XQ
+">
+                <input type="hidden" id="merchantCode" name="merchantCode" value="4313921690">
+                <input type="hidden" id="currency" name="currency" value="USD">
+                <input type="hidden" id="orderAmount" name="orderAmount" value="8000">
+                <input type="hidden" id="orderReference" name="orderReference" value="4yTr67jab5HjFry">
+                <input type="hidden" id="productType" name="productType" value="Double Pane Glass">
+                <input type="hidden" id="productDescription" name="productDescription" value="Double pane glass-20ft x 10ft">
+                <input type="hidden" id="paymentTimeLimit" name="paymentTimeLimit" value="3600">
+                <input type="hidden" id="customerFirstName" name="customerFirstName" value="John">
+                <input type="hidden" id="customerLastName" name="customerLastName" value="Doe">
+                <input type="hidden" id="customerPostalCodeZip" name="customerPostalCodeZip" value="12345">
+                <input type="hidden" id="customerAddress" name="customerAddress" value="123 Main St">
+                <input type="hidden" id="customerEmail" name="customerEmail" value="johndoe@gmail.com">
+                <input type="hidden" id="customerPhone" name="customerPhone" value="254746128977">
+                <input type="hidden" id="extraData" name="extraData" value="">
+                <input type="hidden" id="callbackUrl" name="callbackUrl" value="YOUR_CALLBACK_URL">
+                <input type="hidden" id="countryCode" name="countryCode" value="KE">
+                <input type="hidden" id="secondaryReference" name="secondaryReference" value="SECONDARY_REF_3">
+                <input type="hidden" id="signature" name="signature" value="YOUR_SIGNATURE">
+                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
+            </form>
+        </div>
+
+        <!-- Product 4 -->
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="glass2.jpg" alt="Double pane glass-1ft x 5ft" loading="lazy">
+            <h2>Double pane glass-1ft x 5ft</h2>
+            <p>This compact double pane glass measures 1 foot by 5 feet, perfect for small windows and doors. It provides good insulation and noise reduction, making it suitable for residential and small commercial applications.</p>
+            <form id="submitcheckout" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input type="hidden" id="token" name="token" value="eyJhbGciOiJSUzUxMiJ9.eyJ0b2tlblR5cGUiOiJNRVJDSEFOVCIsImVudiI6IlVBVCIsImFjY291bnQiOiJvSjBPMGVweENzWGV1MU1pelZyN0VrZ1BIeE5jc3VsRlZ4TDdITHBobkhEaGZDQ2pndWtJbmdHV1kvYWxzTVZ0dFN0RTdIUUc4UHhoZ011QTJ4SVFzNWtCMVdja21YTnN4a0NpVjZXWXF0bzRwaFNES3d2OXRKS1o4ZXpCWklXaWlsRFZ3NDdXWGVyWFZXb0FQS3YzN2RXUnBGdHVsanRmSGNrVU1GUDlPZEZvQit4T3dGN1l3akd2ci96VjVwL0g4RjA1V1Rra3YxQWlHWU9XZVN5ZFp5SlZwbWxReithaWZtdWZ5S0pMSG5hbXdhVktZTjliblU5ZnNGZHRaTnFnVlp1ZEoxWmY1MEFoNUl4Q1I3UEVNcXJMM2pBV1cxdUdqa3orWHpZS2pocFdESTNpb25VMlQ3enpxWE0zZTVtMXVMeHAzT1NTSTNHSkxOTVNUekpsK0lJZUhhdWJxWHZmb1RyZEJ2R2l3eXFwdWt5VnNOQzBoMC9xd0FaWklMNGhSY1R4RVZiV24vZC9tVXE1NmVFVEJNYVoyVVR2dm1sakNLaW5uZCtQWU5qVGJLVVFJb0ExOVFhMWY1OFU3VUwvaDZUL3RrazdsUFhWQUxFSVY2Y29mMzU5NXA3NWY0bW5LM0p4dDViak9vM1U3bUNpczcvUXBIMS9ROUpMTXkya1hraDRkdWh6TXhxdTlUd3Mxd0VmL3ZzdiIsImlhdCI6MTc0MjI4NjM2OCwiZXhwIjoxNzQyMjg3MjY4fQ.XO4nFVKiB_YAaiCbf9kR5POIEeyQQJysPS9_bm-Q-oIEiXmFA9NS6DueC4KfkL90BCULY1lStYRsGYGD6RiooBaIAQRs9qYAFs3eAo9bJ46SV13TA_4qXQCwWMHun1kJa1nHmX-sK3DfQqcuQ5W9qUUbNdfihSNGKKJj0dhnNvbBWoAc4Iktb0uUYiMLlzxwxCv3yQ1tXeI_mTJYwVKHNoux7rXbmQeQBwB7MLMS-yjmRtzYV_SJvo02o3lj6Ra00PremCmMMP-KgqvJqjedX7JmCAbl090XsczhNPy_b1Nh1hdystyyDngcHFvuo2Lbm2ubH4ySDZq1_vG7ipw_XQ">
+                <input type="hidden" id="merchantCode" name="merchantCode" value="4313921690">
+                <input type="hidden" id="currency" name="currency" value="USD">
+                <input type="hidden" id="orderAmount" name="orderAmount" value="10">
+                <input type="hidden" id="orderReference" name="orderReference" value="4yTr67jab5HjFr">
+                <input type="hidden" id="productType" name="productType" value="Product">
+                <input type="hidden" id="productDescription" name="productDescription" value="Double pane glass-1ft x 5ft">
+                <input type="hidden" id="paymentTimeLimit" name="paymentTimeLimit" value="15mins">
+                <input type="hidden" id="customerFirstName" name="customerFirstName" value="John">
+                <input type="hidden" id="customerLastName" name="customerLastName" value="Doe">
+                <input type="hidden" id="customerPostalCodeZip" name="customerPostalCodeZip" value="12345">
+                <input type="hidden" id="customerAddress" name="customerAddress" value="123 Main St">
+                <input type="hidden" id="customerEmail" name="customerEmail" value="johndoe@gmail.com">
+                <input type="hidden" id="customerPhone" name="customerPhone" value="254746128977">
+                <input type="hidden" id="extraData" name="extraData" value="">
+                <input type="hidden" id="callbackUrl" name="callbackUrl" value="https://checkout-launch.web.app/redirected">
+                <input type="hidden" id="countryCode" name="countryCode" value="KE">
+                <input type="hidden" id="secondaryReference" name="secondaryReference" value="SECONDARY_REF_4">
+                <input type="hidden" id="signature" name="signature" value="YOUR_SIGNATURE">
+                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ideal Logistics Investment. All rights reserved.</p>
+        <p> Located in:
+            <a>Kasarani</a>
+        </p>
+        <p> Developed by:
+            <a href="https://everlynetech.github.io/">©</a>
+            <a>Kevin Nandi - kevinnandi1631@gmail.com</a>
+        </p>
+        <p> Visitors: <img src="https://www.free-website-hit-counter.com/zc.php?d=9&id=5986&s=18" border='0' >
+        </p>
+    </footer>
+</body>
+</html>
