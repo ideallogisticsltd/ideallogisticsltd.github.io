@@ -286,28 +286,26 @@
             <img src="glass2.jpg" alt="Double pane glass-1ft x 5ft" loading="lazy">
             <h2>Double pane glass-1ft x 5ft</h2>
             <p>This compact double pane glass measures 1 foot by 5 feet, perfect for small windows and doors. It provides good insulation and noise reduction, making it suitable for residential and small commercial applications.</p>
-            <form id="submitcheckout" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input type="hidden" id="token" name="token" value="eyJhbGciOiJSUzUxMiJ9.eyJ0b2tlblR5cGUiOiJNRVJDSEFOVCIsImVudiI6IlVBVCIsImFjY291bnQiOiJJR1I2OFRrV01FUWFlZWMrdmF2QTEvS1IyeFNXdnpONEdnNFBpR3hWUDUwUVA3enlxeVJiU2NVYk4zallwQ1ZoNXZJNGtXb2M1T1NKNmlUdHh3SXhJR1dqSDhoSkdjZDloU0dSd3h5bnVOQkJvbW9Pa0lZV1FoUTQ3L1pqdjMxYm1KTTNwczZuSDRldFdkWkxZOGVVR29KOTVsRTZ5NlFrU1ZjUkkycllRVStaaEJsV2NWNzNKTHJ1d29ISkZwRi9iYks3TUhYSVR0dmZ4V2NOM3lGajI0N1hEQ1dRS3VocFZTTkxtNjV1RGNNMlJRS0ZLVGJ0MzQ3RlNYZGcyMmtHWVdSQnd3UkNVeFhXUVNmc0tOTkRyM2dYaE5iVDUwRU1TdEY3T0cvbTRHTG1mUTVxdjlDNXQxMXBqSTRaQTk1bkZ3OVpoOW5HdXAxbW8xZUlOQmFnTGJrZXE0Vk03OEswckNNVmxSdVJUUGlQKzBSNzlrYXlXNWh0NnVoN3hBT3drTlR2ZUtsOXNubVVhWVBIdzlrbXpyQXFyZHFMemgxSENoVUo4RkJkQjhWWUVOY2lnVzBBcktGVEsrNHY1MzM1WnJhQnlpdVdEVi9RTFQzMnZzUUZhbDV6VXFnNGFHNDYxZ1RYYWNFRnNPM1hFaDZqSkJzSWZMbnhibm8xUWhSclgvM0ZlWnB6T2tpWU4yZXF0M3MzV3lPZiIsImlhdCI6MTc0MjMxNzA5OCwiZXhwIjoxNzQyMzE3OTk4fQ.AYhUEuZe4rOhhH28nYnsw46IYZiVdIGChFqN4l-aLxqmB6X_J4wJn2TvVlQVz0TkFq7orfTKlSJFFwjBe1efzj6ioWECWqpA6N0hIiNLG9OODsNyRAa74MvpQ_n_zKR68KdCtyG6YALxyDt9NdsTSoZl1ZSGa9balILpMF4huiVNjU25_rYH5uQSUu-8eopztGxMOR87EXWZhAOAWj9W_Bc2aT-6DqV0jXdEY1HCqXMpgs0UtUcrWyKtmwa-S0Rc6R1bqR7t-Ig-uU8VNk2QXHc_LGZP9jhjW1S16RHekv8gVo1saZ0pTDw9UfM75SwUAuHMT0bXQQpNmNeTnNl_0g">
-              
-                <input type="hidden" id="merchantCode" name="merchantCode" value="4313921690">
-                <input type="hidden" id="currency" name="currency" value="USD">
-                <input type="hidden" id="orderAmount" name="orderAmount" value="10">
-                <input type="hidden" id="orderReference" name="orderReference" value="ORD1742288301">
-                <input type="hidden" id="productType" name="productType" value="Product">
-                <input type="hidden" id="productDescription" name="productDescription" value="Double pane glass-1ft x 5ft">
-                <input type="hidden" id="paymentTimeLimit" name="paymentTimeLimit" value="15mins">
-                <input type="hidden" id="customerFirstName" name="customerFirstName" value="John">
-                <input type="hidden" id="customerLastName" name="customerLastName" value="Doe">
-                <input type="hidden" id="customerPostalCodeZip" name="customerPostalCodeZip" value="12345">
-                <input type="hidden" id="customerAddress" name="customerAddress" value="123 Main St">
-                <input type="hidden" id="customerEmail" name="customerEmail" value="johndoe@gmail.com">
-                <input type="hidden" id="customerPhone" name="customerPhone" value="254746128977">
-              
-                <input type="hidden" id="callbackUrl" name="callbackUrl" value="https://checkout-launch.web.app/redirected">
-                <input type="hidden" id="countryCode" name="countryCode" value="KE">
-              
-               <input type="hidden" name="signature" value="65e09e0f73cc3ecd6309d809f9a9aa93">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
+             <form action="https://v3-uat.jengapgw.io/processPayment" method="POST" name="paymentForm">
+   <input type="hidden" name="token" value="eyJhbGciOiJSUzUxMiJ9.eyJ0b2tlblR5cGUiOiJNRVJDSEFOVCIsImVudiI6IlVBVCIsImFjY291bnQiOiJaejhaK1prS1JrUGtENWJaT0pRaGNnQlBlUEFabVF6WmtkdHZUeC9CL0lscG5IZ2JZNkFRZUgzWkM0dWNrSlBPck1ycnlXZHZaTjlGQlFGTENEbEZQYzc1Ny9iQ0Y2djF4NHVxNnFVUDFGS2dWa0pvMWwvYXRIMWdGUW01QitaQnoreGVHNWdZL3dUNW9aNVhSdXJQUHJNRHgzM0F1bFNIcmhSSkV3ZStMc3RrQWVITDhrbjV6cFlHbEY5ZzJyMzVDK00rK1JWY0FNSHM3VnhNd05XZjdvbDE1TThyZDFyMXlXNmdOcEtMRzFRc0dLaGdDTk1ra1laekJEU1Nhb25QVWwwbVBZNUFhQ2I0eUg4U1FQZXZqN3JvYWdVWXhVelR6V0srSWlBZDJLdDhWaFFtT3RwRTZxKzNBSzJURGIxY0NTRDI5WmFzRUJVSXdHcy95RzFGNnhhTVRXcDA4UDlFK1FPSCs1RlFRNXdBWlh6MlJET2UzVkdJRDBqZW9mRW1BK3Bhd2IwRVA0YmFZdEIxZnZtcHVHZ1JqN1ovMmxSN0lQN1RwdEJDSzdkdEdxS204eFJNVHh0cENEWE5kMkUzM2FEanpzK0JGYWk5T0tMZ1RyQUdaWi9oekFNZitQR1k0c1ViaU15blFBMXlGZ1I2K2tTZjFkdHp5ODBYbUZCcjc3Mmphb0Exdit6a2pBVG9EWU9xVkRqSyIsImlhdCI6MTc0MjMxOTUxMiwiZXhwIjoxNzQyMzIwNDEyfQ.s-SuYOgC88eBFO1g76TWeNJUps5PvBVkd9swAqsdrKFQOGUHXymM1uM9xAaL9l0FxAmFILSVq_kyn1ZYGEZlAst3M97i2FGxnaxR1wgQ6PimymnpyzA2klWVD0Qecrt0AFriuI9uks8c7ZC9jRGgP5oRnJPRHJ5fMRCZKZnTweQglcTwUiRLw7nhexLQ1En_zqT5jJrQXiSF4NGhVVonlnbGxyOvuPTJ0GXbmrk36dNODtmtVKilHLQD52I2QcMHJrjPFGdGHpi4OO8vC3P4yHH_1LLECVJ6tr3z1NF-L-tvY7g6fS5Ddh44kAo3HXk1I2WQr469dg0FL76fS9iKuQ">
+<input type="hidden" name="merchantCode" value="4313921690">
+<input type="hidden" name="currency" value="KES">
+<input type="hidden" name="orderAmount" value="10">
+<input type="hidden" name="orderReference" value="ORD1742319513">
+<input type="hidden" name="productType" value="Product">
+<input type="hidden" name="productDescription" value="Sample Item Purchase">
+<input type="hidden" name="paymentTimeLimit" value="15mins">
+<input type="hidden" name="customerFirstName" value="Test">
+<input type="hidden" name="customerLastName" value="User">
+<input type="hidden" name="customerPostalCodeZip" value="00100">
+<input type="hidden" name="customerAddress" value="Nairobi">
+<input type="hidden" name="customerEmail" value="test@example.com">
+<input type="hidden" name="customerPhone" value="254746128977">
+<input type="hidden" name="callbackUrl" value="http://localhost:5000/callback">
+<input type="hidden" name="countryCode" value="KE">
+<input type="hidden" name="signature" value="fa8b9f9162dbabb6162688e5f725e43e">
+<input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" onclick="document.paymentForm.submit()"/>
+
             </form>
         </div>
     </div>
