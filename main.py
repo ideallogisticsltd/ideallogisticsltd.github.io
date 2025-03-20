@@ -1,10 +1,9 @@
-from flask import Flask
+from flask import Flask, jsonify
 import requests
 import json
 import time
 from datetime import datetime
 
-# Initialize Flask app
 app = Flask(__name__)
 
 # Jenga API Configuration
@@ -54,7 +53,19 @@ def refresh_token():
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    token = get_auth_token()
+    if token:
+        return jsonify({"token": token})
+    else:
+        return jsonify({"error": "Failed to fetch token"}), 500
+
+@app.route('/token')
+def get_token():
+    token = get_auth_token()
+    if token:
+        return jsonify({"token": token})
+    else:
+        return jsonify({"error": "Failed to fetch token"}), 500
 
 if __name__ == "__main__":
     # Initial token fetch
