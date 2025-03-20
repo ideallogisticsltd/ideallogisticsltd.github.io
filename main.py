@@ -1,7 +1,11 @@
+from flask import Flask
 import requests
 import json
 import time
 from datetime import datetime
+
+# Initialize Flask app
+app = Flask(__name__)
 
 # Jenga API Configuration
 API_KEY = "PozKLVY8Sk30ERkEIX1i5mJwZ8uB282zKr8PiX9Oq7sp2QxVkWkkPcvslDzE/51xgzckZPe4S3rHg+KICvHcEQ=="
@@ -47,6 +51,10 @@ def refresh_token():
         print(f"Token refreshed at {datetime.now()}")
     else:
         print("Failed to refresh token")
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
 if __name__ == "__main__":
     # Initial token fetch
