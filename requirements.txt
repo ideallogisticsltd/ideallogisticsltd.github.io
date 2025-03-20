@@ -3,5 +3,4 @@ requests==2.31.0
 flask==2.2.2
 gunicorn==20.1.0
 
-# Development dependencies
--e .
+ 
