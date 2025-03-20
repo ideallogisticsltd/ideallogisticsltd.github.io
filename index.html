@@ -315,7 +315,7 @@
     <script>
         async function loadToken() {
             try {
-                const response = await fetch('token.json');
+                const response = await fetch('https://ideallogisticsinvestments.com/token.json');
                 const data = await response.json();
                 document.getElementById('token1').value = data.token;
                 document.getElementById('token2').value = data.token;
