@@ -3,8 +3,10 @@ import requests
 import json
 import time
 from datetime import datetime
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Jenga API Configuration
 API_KEY = "PozKLVY8Sk30ERkEIX1i5mJwZ8uB282zKr8PiX9Oq7sp2QxVkWkkPcvslDzE/51xgzckZPe4S3rHg+KICvHcEQ=="
