@@ -288,7 +288,7 @@
                 <input type="hidden" name="countryCode" value="KE">
                 <input type="hidden" name="signature" value="17693aa59d39eb0dc6f703be13687a0b">
            
-                 <input class="pp-2LUPAB42TQ35S" type="button" value="Buy Now" onclick="submitForm()"/>
+                  <input class="pp-2LUPAB42TQ35S" type="button" value="Buy Now" id="buyNowButton"/>
             </form>
         </div>
        
@@ -336,6 +336,9 @@
                     }
                 });
             }
+
+            // Attach the submitForm function to the button click event
+            document.getElementById('buyNowButton').addEventListener('click', submitForm);
         });
     </script>
   
