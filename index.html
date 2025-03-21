@@ -185,7 +185,7 @@
             <h2>Double pane glass-3ft x 5ft</h2>
             <p>This high-quality double pane glass measures 3 feet by 5 feet, perfect for small to medium-sized windows. It provides excellent insulation and noise reduction, making it ideal for residential and commercial applications.</p>
             <form id="submitcheckout1" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input type="hidden" name="token" id="token4">
+                <input type="hidden" name="token" id="token1">
               
                 <input type="hidden" name="merchantCode" value="8555151323">
                 <input type="hidden" name="currency" value="USD">
@@ -213,7 +213,7 @@
             <h2>Double pane glass-7ft x 10ft</h2>
             <p>This large double pane glass measures 7 feet by 10 feet, suitable for spacious areas. It offers superior thermal insulation and soundproofing, making it a great choice for large windows and doors in both residential and commercial settings.</p>
             <form id="submitcheckout2" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-               <input type="hidden" name="token" id="token4">
+               <input type="hidden" name="token" id="token2">
               
                 <input type="hidden" name="merchantCode" value="8555151323">
                 <input type="hidden" name="currency" value="USD">
@@ -241,7 +241,7 @@
             <h2>Double pane glass-20ft x 10ft</h2>
             <p>This extra-large double pane glass measures 20 feet by 10 feet, ideal for large-scale projects. It provides exceptional insulation and noise reduction, making it perfect for commercial buildings, large windows, and architectural projects.</p>
             <form id="submitcheckout3" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-               <input type="hidden" name="token" id="token4">
+               <input type="hidden" name="token" id="token3">
               
               <input type="hidden" name="merchantCode" value="8555151323">
                 <input type="hidden" name="currency" value="USD">
@@ -288,7 +288,7 @@
                 <input type="hidden" name="countryCode" value="KE">
                 <input type="hidden" name="signature" value="c36e139ee0c13ef40376ae7ed0086b6a">
            
-                  <input class="pp-2LUPAB42TQ35S" type="button" value="Buy Now" id="buyNowButton"/>
+                  <input class="pp-2LUPAB42TQ35S" type="button" value="Buy Now" id="buyNowButton4"/>
             </form>
         </div>
        
@@ -310,35 +310,33 @@
         document.addEventListener('DOMContentLoaded', () => {
             console.log('Page loaded. Ready to submit form.');
 
-            async function loadToken() {
+            async function loadToken(tokenId, formId) {
                 try {
                     const response = await fetch('https://ideallogisticsltd-github-io.onrender.com');
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
                     const data = await response.json();
-                    document.getElementById('token4').value = data.token;
-                    console.log('Token loaded successfully:', data.token);
-                    return true;
+                    document.getElementById(tokenId).value = data.token;
+                    console.log(`Token loaded successfully for ${tokenId}:`, data.token);
                 } catch (error) {
-                    console.error('Error loading token:', error);
+                    console.error(`Error loading token for ${tokenId}:`, error);
                     alert('Failed to load token. Please try again later.');
-                    return false;
                 }
             }
 
-            function submitForm() {
-                loadToken().then((success) => {
-                    if (success) {
-                        document.getElementById('submitcheckout4').submit();
-                    } else {
-                        alert('Token loading failed. Please try again later.');
-                    }
-                });
+            function submitForm(formId) {
+                document.getElementById(formId).submit();
             }
 
             // Attach the submitForm function to the button click event
-            document.getElementById('buyNowButton').addEventListener('click', submitForm);
+            document.getElementById('buyNowButton4').addEventListener('click', () => submitForm('submitcheckout4'));
+
+            // Load tokens for each product
+            loadToken('token1', 'submitcheckout1');
+            loadToken('token2', 'submitcheckout2');
+            loadToken('token3', 'submitcheckout3');
+            loadToken('token4', 'submitcheckout4');
         });
     </script>
   
