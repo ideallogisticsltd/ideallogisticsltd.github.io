@@ -348,21 +348,6 @@
             console.log('Page loaded. Ready to submit form.');
         });
     </script>
-    <script>
-        async function loadToken() {
-            try {
-                const response = await fetch('https://ideallogisticsltd-github-io.onrender.com');
-                const data = await response.json();
-                document.getElementById('token1').value = data.token;
-                document.getElementById('token2').value = data.token;
-                document.getElementById('token3').value = data.token;
-               
-            } catch (error) {
-                console.error('Error loading token:', error);
-            }
-        }
-
-        loadToken();
-    </script>
+  
 </body>
 </html>
