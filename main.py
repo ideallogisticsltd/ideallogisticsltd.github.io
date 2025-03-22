@@ -4,6 +4,7 @@ import json
 import time
 from datetime import datetime
 from flask_cors import CORS
+import uuid  # Import the uuid module
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -57,7 +58,9 @@ def refresh_token():
 def hello_world():
     token = get_auth_token()
     if token:
-        return jsonify({"token": token})
+        # Generate a unique order reference using uuid4
+        order_reference = str(uuid.uuid4())
+        return jsonify({"token": token, "orderReference": order_reference})
     else:
         return jsonify({"error": "Failed to fetch token"}), 500
 
