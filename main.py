@@ -4,7 +4,8 @@ import json
 import time
 from datetime import datetime
 from flask_cors import CORS
-import uuid  # Import the uuid module
+import string
+import random
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -54,12 +55,18 @@ def refresh_token():
     else:
         print("Failed to refresh token")
 
+def generate_alphanumeric_order_reference(length=16):
+    """Generate a random alphanumeric string of specified length."""
+    characters = string.ascii_letters + string.digits
+    order_reference = ''.join(random.choices(characters, k=length))
+    return order_reference
+
 @app.route('/')
 def hello_world():
     token = get_auth_token()
     if token:
-        # Generate a unique order reference using uuid4
-        order_reference = str(uuid.uuid4())
+        # Generate a unique alphanumeric order reference
+        order_reference = generate_alphanumeric_order_reference()
         return jsonify({"token": token, "orderReference": order_reference})
     else:
         return jsonify({"error": "Failed to fetch token"}), 500
