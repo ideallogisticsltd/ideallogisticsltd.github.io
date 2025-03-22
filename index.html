@@ -210,7 +210,7 @@
                 <input type="hidden" name="callbackUrl" value="http://localhost:5000/callback">
                 <input type="hidden" name="countryCode" value="KE">
                   <input type="hidden" name="signature" value="17693aa59d39eb0dc6f703be13687a0b">
-              <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" onclick="generateOrderReference('orderReference1')"/>
+             <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
             </form>
         </div>
 
@@ -239,7 +239,7 @@
                 <input type="hidden" name="callbackUrl" value="http://localhost:5000/callback">
                 <input type="hidden" name="countryCode" value="KE">
                    <input type="hidden" name="signature" value="c36e139ee0c13ef40376ae7ed0086b6a">
-               <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" onclick="generateOrderReference('orderReference2')"/>
+                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
             </form>
         </div>
 
@@ -268,8 +268,8 @@
                 <input type="hidden" name="callbackUrl" value="http://localhost:5000/callback">
                 <input type="hidden" name="countryCode" value="KE">
                   <input type="hidden" name="signature" value="c36e139ee0c13ef40376ae7ed0086b6a">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" onclick="generateOrderReference('orderReference3')"/>
-                
+                  <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" />
+               
             </form>
         </div>
 
@@ -320,44 +320,57 @@
     </footer>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('Page loaded. Ready to submit form.');
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('Page loaded. Ready to submit form.');
 
-            async function loadToken(tokenId, formId) {
-                try {
-                    const response = await fetch('https://ideallogisticsltd-github-io.onrender.com');
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    const data = await response.json();
-                    document.getElementById(tokenId).value = data.token;
-                    console.log(`Token loaded successfully for ${tokenId}:`, data.token);
-                } catch (error) {
-                    console.error(`Error loading token for ${tokenId}:`, error);
+        async function loadToken(tokenId, formId) {
+            try {
+                const response = await fetch('https://ideallogisticsltd-github-io.onrender.com');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
+                const data = await response.json();
+                document.getElementById(tokenId).value = data.token;
+                console.log(`Token loaded successfully for ${tokenId}:`, data.token);
+            } catch (error) {
+                console.error(`Error loading token for ${tokenId}:`, error);
             }
+        }
 
-            function generateOrderReference(orderRefId) {
-                // Generate a unique order reference using a timestamp
-                const timestamp = Date.now();
-                const orderReference = `ORD${timestamp}`;
-                document.getElementById(orderRefId).value = orderReference;
-            }
+        function generateOrderReference(orderRefId) {
+            // Generate a unique order reference using a timestamp
+            const timestamp = Date.now();
+            const orderReference = `ORD${timestamp}`;
+            document.getElementById(orderRefId).value = orderReference;
+        }
 
-            // Attach the submitForm function to the button click event
-            document.getElementById('buyNowButton4').addEventListener('click', () => {
-                generateOrderReference('orderReference4');
-                document.getElementById('submitcheckout4').submit();
-            });
-
-            // Load tokens for each product
-            loadToken('token1', 'submitcheckout1');
-            loadToken('token2', 'submitcheckout2');
-            loadToken('token3', 'submitcheckout3');
-            loadToken('token4', 'submitcheckout4');
+        // Attach the submitForm function to the button click event
+        document.getElementById('buyNowButton4').addEventListener('click', () => {
+            generateOrderReference('orderReference4');
+            document.getElementById('submitcheckout4').submit();
         });
-    </script>
+
+        // Ensure orderReference is generated before form submission for other products
+        document.getElementById('submitcheckout1').addEventListener('submit', (event) => {
+            generateOrderReference('orderReference1');
+        });
+
+        document.getElementById('submitcheckout2').addEventListener('submit', (event) => {
+            generateOrderReference('orderReference2');
+        });
+
+        document.getElementById('submitcheckout3').addEventListener('submit', (event) => {
+            generateOrderReference('orderReference3');
+        });
+
+        // Load tokens for each product
+        loadToken('token1', 'submitcheckout1');
+        loadToken('token2', 'submitcheckout2');
+        loadToken('token3', 'submitcheckout3');
+        loadToken('token4', 'submitcheckout4');
+    });
+</script>
  
   
 </body>
