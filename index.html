@@ -197,7 +197,7 @@
                 <input type="hidden" name="merchantCode" value="8555151323">
                 <input type="hidden" name="currency" value="USD">
                 <input type="hidden" name="orderAmount" value="800">
-                <input type="hidden" name="orderReference" value="ORD1742319213">
+                <input type="hidden" name="orderReference" id="orderReference1">
                 <input type="hidden" name="productType" value="Product">
                 <input type="hidden" name="productDescription" value="Double pane glass 3ft by 5ft">
                 <input type="hidden" name="paymentTimeLimit" value="15mins">
@@ -226,7 +226,7 @@
                 <input type="hidden" name="merchantCode" value="8555151323">
                 <input type="hidden" name="currency" value="USD">
                 <input type="hidden" name="orderAmount" value="2500">
-                <input type="hidden" name="orderReference" value="ORD17423213313">
+                <input type="hidden" name="orderReference" id="orderReference2">
                 <input type="hidden" name="productType" value="Product">
                 <input type="hidden" name="productDescription" value="Double pane glass 7ft by 10ft">
                 <input type="hidden" name="paymentTimeLimit" value="15mins">
@@ -255,7 +255,7 @@
               <input type="hidden" name="merchantCode" value="8555151323">
                 <input type="hidden" name="currency" value="USD">
                 <input type="hidden" name="orderAmount" value="5000">
-                <input type="hidden" name="orderReference" value="ORD17432319313">
+                <input type="hidden" name="orderReference" id="orderReference3">
                 <input type="hidden" name="productType" value="Product">
                 <input type="hidden" name="productDescription" value="Double pane glass 20ft by 10ft">
                 <input type="hidden" name="paymentTimeLimit" value="15mins">
@@ -285,7 +285,7 @@
                <input type="hidden" name="merchantCode" value="8555151323">
                 <input type="hidden" name="currency" value="USD">
                 <input type="hidden" name="orderAmount" value="1.50">
-                <input type="hidden" name="orderReference" value="ORD17423192513">
+                <input type="hidden" name="orderReference" id="orderReference4">
                 <input type="hidden" name="productType" value="Product">
                 <input type="hidden" name="productDescription" value="Plastic Seal Strip">
                 <input type="hidden" name="paymentTimeLimit" value="15mins">
@@ -317,7 +317,9 @@
         <p> Visitors: <img src="https://www.free-website-hit-counter.com/zc.php?d=9&id=5986&s=18" border='0' >
         </p>
     </footer>
- <script>
+
+
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             console.log('Page loaded. Ready to submit form.');
 
@@ -332,16 +334,21 @@
                     console.log(`Token loaded successfully for ${tokenId}:`, data.token);
                 } catch (error) {
                     console.error(`Error loading token for ${tokenId}:`, error);
-                    
                 }
             }
 
-            function submitForm(formId) {
-                document.getElementById(formId).submit();
+            function generateOrderReference(orderRefId) {
+                // Generate a unique order reference using a timestamp
+                const timestamp = Date.now();
+                const orderReference = `ORD${timestamp}`;
+                document.getElementById(orderRefId).value = orderReference;
             }
 
             // Attach the submitForm function to the button click event
-            document.getElementById('buyNowButton4').addEventListener('click', () => submitForm('submitcheckout4'));
+            document.getElementById('buyNowButton4').addEventListener('click', () => {
+                generateOrderReference('orderReference4');
+                document.getElementById('submitcheckout4').submit();
+            });
 
             // Load tokens for each product
             loadToken('token1', 'submitcheckout1');
@@ -350,6 +357,7 @@
             loadToken('token4', 'submitcheckout4');
         });
     </script>
+ 
   
 </body>
 </html>
