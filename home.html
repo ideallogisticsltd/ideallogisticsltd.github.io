@@ -216,23 +216,27 @@
     <!-- Paystack SDK Script -->
     <script src="https://js.paystack.co/v1/inline.js"></script>
 
-    <!-- Paystack Button Render Script for Product 1 -->
     <script>
         document.getElementById('paystack-button-1').onclick = function() {
             var handler = PaystackPop.setup({
                 key: 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc', // Replace with your public key
-                email: 'customer@example.com', // Replace with customer's email
-                amount: 15000, // Replace with the amount to be paid (in kobo)
-                ref: ''+Math.floor((Math.random() * 1000000000) + 1), // Replace with a reference you generated
+                amount: 15000, // Amount in kobo
+                email: document.getElementById('customer-email').value, // Fetch email from input field
+                currency: 'KES', // Currency code
+                firstName: document.getElementById('customer-first-name').value, // Fetch first name from input field
+                lastName: document.getElementById('customer-last-name').value, // Fetch last name from input field
+                phone: document.getElementById('customer-phone').value, // Fetch phone number from input field
+                channels: ['card', 'bank', 'ussd', 'qr', 'eft', 'mobile_money', 'bank_transfer'], // Payment channels
                 metadata: {
                     custom_fields: [
                         {
                             display_name: "Mobile Number",
                             variable_name: "mobile_number",
-                            value: "+2348012345678"
+                            value: document.getElementById('customer-mobile').value // Fetch mobile number from input field
                         }
                     ]
                 },
+                reference: ''+Math.floor((Math.random() * 1000000000) + 1), // Generate a unique reference
                 callback: function(response){
                     alert('Payment complete! Reference: ' + response.reference);
                 },
@@ -249,18 +253,23 @@
         document.getElementById('paystack-button-2').onclick = function() {
             var handler = PaystackPop.setup({
                 key: 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc', // Replace with your public key
-                email: 'customer@example.com', // Replace with customer's email
-                amount: 30000, // Replace with the amount to be paid (in kobo)
-                ref: ''+Math.floor((Math.random() * 1000000000) + 1), // Replace with a reference you generated
+                amount: 30000, // Amount in kobo
+                email: document.getElementById('customer-email').value, // Fetch email from input field
+                currency: 'KES', // Currency code
+                firstName: document.getElementById('customer-first-name').value, // Fetch first name from input field
+                lastName: document.getElementById('customer-last-name').value, // Fetch last name from input field
+                phone: document.getElementById('customer-phone').value, // Fetch phone number from input field
+                channels: ['card', 'bank', 'ussd', 'qr', 'eft', 'mobile_money', 'bank_transfer'], // Payment channels
                 metadata: {
                     custom_fields: [
                         {
                             display_name: "Mobile Number",
                             variable_name: "mobile_number",
-                            value: "+2348012345678"
+                            value: document.getElementById('customer-mobile').value // Fetch mobile number from input field
                         }
                     ]
                 },
+                reference: ''+Math.floor((Math.random() * 1000000000) + 1), // Generate a unique reference
                 callback: function(response){
                     alert('Payment complete! Reference: ' + response.reference);
                 },
@@ -277,18 +286,23 @@
         document.getElementById('paystack-button-3').onclick = function() {
             var handler = PaystackPop.setup({
                 key: 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc', // Replace with your public key
-                email: 'customer@example.com', // Replace with customer's email
-                amount: 50000, // Replace with the amount to be paid (in kobo)
-                ref: ''+Math.floor((Math.random() * 1000000000) + 1), // Replace with a reference you generated
+                amount: 50000, // Amount in kobo
+                email: document.getElementById('customer-email').value, // Fetch email from input field
+                currency: 'KES', // Currency code
+                firstName: document.getElementById('customer-first-name').value, // Fetch first name from input field
+                lastName: document.getElementById('customer-last-name').value, // Fetch last name from input field
+                phone: document.getElementById('customer-phone').value, // Fetch phone number from input field
+                channels: ['card', 'bank', 'ussd', 'qr', 'eft', 'mobile_money', 'bank_transfer'], // Payment channels
                 metadata: {
                     custom_fields: [
                         {
                             display_name: "Mobile Number",
                             variable_name: "mobile_number",
-                            value: "+2348012345678"
+                            value: document.getElementById('customer-mobile').value // Fetch mobile number from input field
                         }
                     ]
                 },
+                reference: ''+Math.floor((Math.random() * 1000000000) + 1), // Generate a unique reference
                 callback: function(response){
                     alert('Payment complete! Reference: ' + response.reference);
                 },
@@ -299,6 +313,7 @@
             handler.openIframe();
         }
     </script>
+    
 
     <footer>
         <p>&copy; 2025 Ideal Logistics Investment. All rights reserved.</p>
