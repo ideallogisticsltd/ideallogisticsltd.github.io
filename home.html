@@ -153,34 +153,35 @@
         </div>
     </div>
     <div class="footer">
-        <p>&copy; 2024 Kevin Nandi. Contact us at <a href="mailto:kevinnandi1631@gmail.com" style="color: #fff;">kevinnandi1631@gmail.com</a></p>
+        <p>&copy;   Kevin Nandi. Contact us at <a href="mailto:kevinnandi1631@gmail.com" style="color: #fff;">kevinnandi1631@gmail.com</a></p>
     </div>
 
+   
     <script>
-        function initiatePayment(itemId, email) {
-            fetch('https://ideallogisticsltd-github-io.onrender.com/initiate_payment', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ item_id: itemId, email: email })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.authorization_url) {
-                    const iframe = document.createElement('iframe');
-                    iframe.style.display = 'none';
-                    iframe.src = data.authorization_url;
-                    document.body.appendChild(iframe);
-                } else {
-                    alert('Failed to initialize payment');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
+    function initiatePayment(itemId, email) {
+        fetch('https://ideallogisticsltd-github-io.onrender.com/initiate_payment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ item_id: itemId, email: email })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.authorization_url) {
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = data.authorization_url;
+                document.body.appendChild(iframe);
+            } else {
                 alert('Failed to initialize payment');
-            });
-        }
-    </script>
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to initialize payment');
+        });
+    }
+</script>
 </body>
 </html>
