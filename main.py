@@ -1,6 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 import json
+
+app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Define your secret key directly in the code (not recommended for production)
 PAYSTACK_SECRET_KEY = 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc'
@@ -26,8 +30,6 @@ items = {
         'description': 'This extra-large double pane glass measures 20 feet by 10 feet, ideal for large-scale projects. It provides exceptional insulation and noise reduction, making it perfect for commercial buildings, large windows, and architectural projects.'
     }
 }
-
-app = Flask(__name__)
 
 @app.route('/initiate_payment', methods=['POST'])
 def initiate_payment():
