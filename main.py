@@ -1,10 +1,7 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask import Flask, request, render_template_string, redirect, jsonify
 import requests
 import json
-
-app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+from datetime import datetime
 
 # Define your secret key directly in the code (not recommended for production)
 PAYSTACK_SECRET_KEY = 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc'
@@ -31,10 +28,12 @@ items = {
     }
 }
 
+app = Flask(__name__)
+
 @app.route('/initiate_payment', methods=['POST'])
 def initiate_payment():
-    item_id = request.json.get('item_id')
-    email = request.json.get('email')
+    item_id = request.form.get('item_id')
+    email = request.form.get('email')
 
     if item_id not in items:
         return jsonify({'error': 'Invalid item ID'}), 400
@@ -59,7 +58,32 @@ def initiate_payment():
     if response.status_code == 200:
         response_data = response.json()
         authorization_url = response_data['data']['authorization_url']
-        return jsonify({'authorization_url': authorization_url})
+        return render_template_string('''
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Payment</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f4f4f4;
+                    }
+                    iframe {
+                        width: 100%;
+                        height: 100vh;
+                        border: none;
+                    }
+                </style>
+            </head>
+            <body>
+                <iframe src="{{ authorization_url }}"></iframe>
+            </body>
+            </html>
+        ''', authorization_url=authorization_url)
     else:
         return jsonify({'error': 'Failed to initialize payment', 'status_code': response.status_code}), response.status_code
 
