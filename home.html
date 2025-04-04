@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="google-adsense-account" content="ca-pub-9549561561349380">
     <title>Ideal Logistics Investment</title>
+      
     <link rel="icon" type="image/png" href="logo.png">
    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
  
-   
-
-   
+ 
+    <!-- Matomo Tag Manager -->
+<script>
+  var _mtm = window._mtm = window._mtm || [];
+  _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+  (function() {
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/ideallogisticsinvestments.matomo.cloud/container_umLEjzrC.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Tag Manager -->
     <style>
         body {
             font-family: 'Roboto', 'Helvetica Neue', sans-serif;
@@ -141,30 +150,9 @@
         .product p {
             margin: 0 0 20px 0;
         }
-        .paypal-button {
+        .paystack-button {
             text-align: center;
         }
-        .pp-2LUPAB42TQ35S {
-            text-align: center;
-            border: none;
-            border-radius: 0.25rem;
-            min-width: 11.625rem;
-            padding: 0 2rem;
-            height: 2.625rem;
-            font-weight: bold;
-            background-color: #FFD140;
-            color: #000000;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            font-size: 1rem;
-            line-height: 1.25rem;
-            cursor: pointer;
-        }
-
-        .price {
-    font-size: 1.2em;
-    color: green;
-    margin-top: 10px;
-}
     </style>
 </head>
 <body>
@@ -172,7 +160,6 @@
         <div class="container">
             <div id="branding">
                <img src="logo.png" alt="Ideal Logistics Investment Logo" style="height: 60px;">
-                
             </div>
             <nav>
                 <ul>
@@ -182,6 +169,22 @@
                 </ul>
             </nav>
         </div>
+        <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://ideallogisticsinvestments.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/ideallogisticsinvestments.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
     </header>
 
     <div class="container">
@@ -190,28 +193,7 @@
             <img src="glass1.jpg" alt="Double pane glass-3ft x 5ft" loading="lazy">
             <h2>Double pane glass-3ft x 5ft</h2>
             <p>This high-quality double pane glass measures 3 feet by 5 feet, perfect for small to medium-sized windows. It provides excellent insulation and noise reduction, making it ideal for residential and commercial applications.</p>
-             <p class="price">Price: $800</p>
-            <form id="submitcheckout1" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input type="hidden" name="token" id="token1">
-              
-                <input type="hidden" name="merchantCode" value="8555151323">
-                <input type="hidden" name="currency" value="USD">
-                <input type="hidden" name="orderAmount" value="800">
-                <input type="hidden" name="orderReference" value="ORD1742319213">
-                <input type="hidden" name="productType" value="Product">
-                <input type="hidden" name="productDescription" value="Double pane glass 3ft by 5ft">
-                <input type="hidden" name="paymentTimeLimit" value="15mins">
-                <input type="hidden" name="customerFirstName" value="Jon">
-                <input type="hidden" name="customerLastName" value="Doe">
-                <input type="hidden" name="customerPostalCodeZip" value="00100">
-                <input type="hidden" name="customerAddress" value="Nairobi">
-                <input type="hidden" name="customerEmail" value="test@example.com">
-                <input type="hidden" name="customerPhone" value="254746128977">
-                <input type="hidden" name="callbackUrl" value="http://localhost:5000/callback">
-                <input type="hidden" name="countryCode" value="KE">
-                  <input type="hidden" name="signature" value="17693aa59d39eb0dc6f703be13687a0b">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" onclick="document.getElementById('submitcheckout1').submit()"/>
-            </form>
+            <button id="paystack-button-1" class="paystack-button">Pay with Paystack</button>
         </div>
 
         <!-- Product 2 -->
@@ -219,28 +201,7 @@
             <img src="glass2.jpg" alt="Double pane glass-7ft x 10ft" loading="lazy">
             <h2>Double pane glass-7ft x 10ft</h2>
             <p>This large double pane glass measures 7 feet by 10 feet, suitable for spacious areas. It offers superior thermal insulation and soundproofing, making it a great choice for large windows and doors in both residential and commercial settings.</p>
-            <p class="price">Price: $2500</p>
-            <form id="submitcheckout2" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-               <input type="hidden" name="token" id="token2">
-              
-                <input type="hidden" name="merchantCode" value="8555151323">
-                <input type="hidden" name="currency" value="USD">
-                <input type="hidden" name="orderAmount" value="2500">
-                <input type="hidden" name="orderReference" value="ORD17423213313">
-                <input type="hidden" name="productType" value="Product">
-                <input type="hidden" name="productDescription" value="Double pane glass 7ft by 10ft">
-                <input type="hidden" name="paymentTimeLimit" value="15mins">
-                <input type="hidden" name="customerFirstName" value="Jon">
-                <input type="hidden" name="customerLastName" value="Doe">
-                <input type="hidden" name="customerPostalCodeZip" value="00100">
-                <input type="hidden" name="customerAddress" value="Nairobi">
-                <input type="hidden" name="customerEmail" value="test@example.com">
-                <input type="hidden" name="customerPhone" value="254746128977">
-                <input type="hidden" name="callbackUrl" value="http://localhost:5000/callback">
-                <input type="hidden" name="countryCode" value="KE">
-                   <input type="hidden" name="signature" value="c36e139ee0c13ef40376ae7ed0086b6a">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" onclick="document.getElementById('submitcheckout2').submit()"/>
-            </form>
+            <button id="paystack-button-2" class="paystack-button">Pay with Paystack</button>
         </div>
 
         <!-- Product 3 -->
@@ -248,108 +209,126 @@
             <img src="glass3.jpg" alt="Double pane glass-20ft x 10ft" loading="lazy">
             <h2>Double pane glass-20ft x 10ft</h2>
             <p>This extra-large double pane glass measures 20 feet by 10 feet, ideal for large-scale projects. It provides exceptional insulation and noise reduction, making it perfect for commercial buildings, large windows, and architectural projects.</p>
-          <p class="price">Price: $5000</p>
-            <form id="submitcheckout3" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-               <input type="hidden" name="token" id="token3">
-              
-              <input type="hidden" name="merchantCode" value="8555151323">
-                <input type="hidden" name="currency" value="USD">
-                <input type="hidden" name="orderAmount" value="5000">
-                <input type="hidden" name="orderReference" value="ORD17432319313">
-                <input type="hidden" name="productType" value="Product">
-                <input type="hidden" name="productDescription" value="Double pane glass 20ft by 10ft">
-                <input type="hidden" name="paymentTimeLimit" value="15mins">
-                <input type="hidden" name="customerFirstName" value="Jon">
-                <input type="hidden" name="customerLastName" value="Doe">
-                <input type="hidden" name="customerPostalCodeZip" value="00100">
-                <input type="hidden" name="customerAddress" value="Nairobi">
-                <input type="hidden" name="customerEmail" value="test@example.com">
-                <input type="hidden" name="customerPhone" value="254746128977">
-                <input type="hidden" name="callbackUrl" value="http://localhost:5000/callback">
-                <input type="hidden" name="countryCode" value="KE">
-                  <input type="hidden" name="signature" value="c36e139ee0c13ef40376ae7ed0086b6a">
-                <input class="pp-2LUPAB42TQ35S" type="submit" value="Buy Now" onclick="document.getElementById('submitcheckout3').submit()"/>
-            </form>
+            <button id="paystack-button-3" class="paystack-button">Pay with Paystack</button>
         </div>
-
-        <!-- Product 4 -->
-        <div class="product">
-            <img src="lass4.jpg" alt="Double pane glass-1ft x 5ft" loading="lazy">
-            <h2>Plastic Seal Strip</h2>
-            <p>A plastic seal strip is commonly used to create a secure, airtight, or waterproof seal for packaging, doors, windows, or various products. It’s typically made from materials like PVC, polyethylene, or rubber, and is often used in industries like food packaging, construction, automotive, and electronics.</p>
-              <p class="price">Price: $1.50</p>
-
-            <form id="submitcheckout4" action="https://v3-uat.jengapgw.io/processPayment" method="POST" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input type="hidden" name="token" id="token4">
-              
-               <input type="hidden" name="merchantCode" value="8555151323">
-                <input type="hidden" name="currency" value="USD">
-                <input type="hidden" name="orderAmount" value="1.50">
-                <input type="hidden" name="orderReference" value="ORD17423192513">
-                <input type="hidden" name="productType" value="Product">
-                <input type="hidden" name="productDescription" value="Plastic Seal Strip">
-                <input type="hidden" name="paymentTimeLimit" value="15mins">
-                <input type="hidden" name="customerFirstName" value="Jon">
-                <input type="hidden" name="customerLastName" value="Doe">
-                <input type="hidden" name="customerPostalCodeZip" value="00100">
-                <input type="hidden" name="customerAddress" value="Nairobi">
-                <input type="hidden" name="customerEmail" value="test@example.com">
-                <input type="hidden" name="customerPhone" value="254746128977">
-                <input type="hidden" name="callbackUrl" value="http://localhost:5000/callback">
-                <input type="hidden" name="countryCode" value="KE">
-                <input type="hidden" name="signature" value="c36e139ee0c13ef40376ae7ed0086b6a">
-           
-                  <input class="pp-2LUPAB42TQ35S" type="button" value="Buy Now" id="buyNowButton4"/>
-            </form>
-        </div>
-       
     </div>
+
+    <!-- Paystack SDK Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <!-- Paystack Button Render Script for Product 1 -->
+    <script>
+        document.getElementById('paystack-button-1').onclick = function() {
+            var handler = PaystackPop.setup({
+                key: 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc', // Replace with your public key
+                email: 'customer@example.com', // Replace with customer's email
+                amount: 15000, // Replace with the amount to be paid (in kobo)
+                ref: ''+Math.floor((Math.random() * 1000000000) + 1), // Replace with a reference you generated
+                metadata: {
+                    custom_fields: [
+                        {
+                            display_name: "Mobile Number",
+                            variable_name: "mobile_number",
+                            value: "+2348012345678"
+                        }
+                    ]
+                },
+                callback: function(response){
+                    alert('Payment complete! Reference: ' + response.reference);
+                },
+                onClose: function(){
+                    alert('Payment window closed.');
+                }
+            });
+            handler.openIframe();
+        }
+    </script>
+
+    <!-- Paystack Button Render Script for Product 2 -->
+    <script>
+        document.getElementById('paystack-button-2').onclick = function() {
+            var handler = PaystackPop.setup({
+                key: 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc', // Replace with your public key
+                email: 'customer@example.com', // Replace with customer's email
+                amount: 30000, // Replace with the amount to be paid (in kobo)
+                ref: ''+Math.floor((Math.random() * 1000000000) + 1), // Replace with a reference you generated
+                metadata: {
+                    custom_fields: [
+                        {
+                            display_name: "Mobile Number",
+                            variable_name: "mobile_number",
+                            value: "+2348012345678"
+                        }
+                    ]
+                },
+                callback: function(response){
+                    alert('Payment complete! Reference: ' + response.reference);
+                },
+                onClose: function(){
+                    alert('Payment window closed.');
+                }
+            });
+            handler.openIframe();
+        }
+    </script>
+
+    <!-- Paystack Button Render Script for Product 3 -->
+    <script>
+        document.getElementById('paystack-button-3').onclick = function() {
+            var handler = PaystackPop.setup({
+                key: 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc', // Replace with your public key
+                email: 'customer@example.com', // Replace with customer's email
+                amount: 50000, // Replace with the amount to be paid (in kobo)
+                ref: ''+Math.floor((Math.random() * 1000000000) + 1), // Replace with a reference you generated
+                metadata: {
+                    custom_fields: [
+                        {
+                            display_name: "Mobile Number",
+                            variable_name: "mobile_number",
+                            value: "+2348012345678"
+                        }
+                    ]
+                },
+                callback: function(response){
+                    alert('Payment complete! Reference: ' + response.reference);
+                },
+                onClose: function(){
+                    alert('Payment window closed.');
+                }
+            });
+            handler.openIframe();
+        }
+    </script>
 
     <footer>
         <p>&copy; 2025 Ideal Logistics Investment. All rights reserved.</p>
         <p> Located in:
-            <a>Kasarani</a>
+            <a>Kasarani</a> |
         </p>
-        <p> Developer:
-            <a href="https://everlynetech.github.io/">©</a>
-            <a>Kevin Nandi - kevinnandi1631@gmail.com</a>
+          
+           <p> Payment:
+            <a>Family Bank</a> |
         </p>
-        <p> Visitors: <img src="https://www.free-website-hit-counter.com/zc.php?d=9&id=5986&s=18" border='0' >
+           <p> Developed by:
+            <a>Kevin Nandi - kevinnandi1631@gmail.com</a> |
+                 <a href="https://everlynetech.github.io/">&copy;</a> 
         </p>
+          <p> Visitors: <img src="https://www.free-website-hit-counter.com/zc.php?d=9&id=5986&s=18" border='0' >
+</p>
     </footer>
- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('Page loaded. Ready to submit form.');
-
-            async function loadToken(tokenId, formId) {
-                try {
-                    const response = await fetch('https://ideallogisticsltd-github-io.onrender.com');
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    const data = await response.json();
-                    document.getElementById(tokenId).value = data.token;
-                    console.log(`Token loaded successfully for ${tokenId}:`, data.token);
-                } catch (error) {
-                    console.error(`Error loading token for ${tokenId}:`, error);
-                    alert('Failed to load token. Please try again later.');
-                }
-            }
-
-            function submitForm(formId) {
-                document.getElementById(formId).submit();
-            }
-
-            // Attach the submitForm function to the button click event
-            document.getElementById('buyNowButton4').addEventListener('click', () => submitForm('submitcheckout4'));
-
-            // Load tokens for each product
-            loadToken('token1', 'submitcheckout1');
-            loadToken('token2', 'submitcheckout2');
-            loadToken('token3', 'submitcheckout3');
-            loadToken('token4', 'submitcheckout4');
-        });
-    </script>
-  
+     
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9549561561349380"
+     crossorigin="anonymous"></script>
+    
+ 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9549561561349380"
+     data-ad-slot="1132892928"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>   
 </body>
 </html>
