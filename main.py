@@ -10,21 +10,27 @@ PAYSTACK_SECRET_KEY = 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc'
 items = {
     'item1': {
         'name': 'Double pane glass-3ft x 5ft',
-        'price': 4000,
+        'price': 112000,
         'image': 'https://ideallogisticsinvestments.com/glass1.jpg',
         'description': 'This high-quality double pane glass measures 3 feet by 5 feet, perfect for small to medium-sized windows. It provides excellent insulation and noise reduction, making it ideal for residential and commercial applications.'
     },
     'item2': {
         'name': 'Double pane glass-7ft x 10ft',
-        'price': 7000,
+        'price': 350000,
         'image': 'https://ideallogisticsinvestments.com/glass2.jpg',
         'description': 'This large double pane glass measures 7 feet by 10 feet, suitable for spacious areas. It offers superior thermal insulation and soundproofing, making it a great choice for large windows and doors in both residential and commercial settings.'
     },
     'item3': {
         'name': 'Double pane glass-20ft x 10ft',
-        'price': 9000,
+        'price': 700000,
         'image': 'https://ideallogisticsinvestments.com/glass3.jpg',
         'description': 'This extra-large double pane glass measures 20 feet by 10 feet, ideal for large-scale projects. It provides exceptional insulation and noise reduction, making it perfect for commercial buildings, large windows, and architectural projects.'
+    },
+    'item4': {
+        'name': 'Plastic Seal Strip',
+        'price': 210,
+        'image': 'https://ideallogisticsinvestments.com/lass4.jpg',
+        'description': 'A plastic seal strip typically refers to a flexible, strip-like material used to create an airtight or watertight seal between two surfaces. They are commonly made from materials such as plastic, rubber, or silicone and are often used in a variety of applications.'
     }
 }
 
