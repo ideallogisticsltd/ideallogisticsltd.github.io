@@ -131,7 +131,7 @@
             <h2>Double pane glass-3ft x 5ft</h2>
             <p>This high-quality double pane glass measures 3 feet by 5 feet, perfect for small to medium-sized windows. It provides excellent insulation and noise reduction, making it ideal for residential and commercial applications.</p>
             <p>Price: KES 112, 000</p>
-            <form action="http://ideallogisticsinvestments.free.nf/initiate_payment.php" method="post" style="display: inline;">
+            <form id="paymentForm" action="http://ideallogisticsinvestments.free.nf/initiate_payment.php" method="post" style="display: inline;">
                 <input type="hidden" name="item_id" value="item1">
                 <input type="hidden" name="email" value="customer@email.com">
                 <input type="hidden" name="amount" value="112000">
@@ -143,7 +143,7 @@
             <h2>Double pane glass-7ft x 10ft</h2>
             <p>This large double pane glass measures 7 feet by 10 feet, suitable for spacious areas. It offers superior thermal insulation and soundproofing, making it a great choice for large windows and doors in both residential and commercial settings.</p>
             <p>Price: KES 350, 000</p>
-            <form action="http://ideallogisticsinvestments.free.nf/initiate_payment.php" method="post" style="display: inline;">
+            <form id="paymentForm" action="http://ideallogisticsinvestments.free.nf/initiate_payment.php" method="post" style="display: inline;">
                 <input type="hidden" name="item_id" value="item2">
                 <input type="hidden" name="email" value="customer@email.com">
                 <input type="hidden" name="amount" value="350000">
@@ -155,7 +155,7 @@
             <h2>Double pane glass-20ft x 10ft</h2>
             <p>This extra-large double pane glass measures 20 feet by 10 feet, ideal for large-scale projects. It provides exceptional insulation and noise reduction, making it perfect for commercial buildings, large windows, and architectural projects.</p>
             <p>Price: KES 700, 000</p>
-            <form action="http://ideallogisticsinvestments.free.nf/initiate_payment.php" method="post" style="display: inline;">
+            <form id="paymentForm" action="http://ideallogisticsinvestments.free.nf/initiate_payment.php" method="post" style="display: inline;">
                 <input type="hidden" name="item_id" value="item3">
                 <input type="hidden" name="email" value="customer@email.com">
                 <input type="hidden" name="amount" value="700000">
@@ -168,7 +168,7 @@
             <h2>Plastic Seal Strip</h2>
             <p>A plastic seal strip typically refers to a flexible, strip-like material used to create an airtight or watertight seal between two surfaces. They are commonly made from materials such as plastic, rubber, or silicone and are often used in a variety of applications</p>
             <p>Price: KES 210</p>
-            <form action="http://ideallogisticsinvestments.free.nf/initiate_payment.php" method="post" style="display: inline;">
+            <form id="paymentForm" action="http://ideallogisticsinvestments.free.nf/initiate_payment.php" method="post" style="display: inline;">
                 <input type="hidden" name="item_id" value="item4">
                 <input type="hidden" name="email" value="ideallogisticsinvestments@gmail.com">
                  <input type="hidden" name="amount" value="210">
@@ -178,8 +178,35 @@
 
         
     </div>
-    <div class="footer">
+
+</body>
+
+        <div class="footer">
         <p>&copy; 2024 Kevin Nandi. Contact us at <a href="mailto:kevinnandi1631@gmail.com" style="color: #fff;">kevinnandi1631@gmail.com</a></p>
     </div>
-</body>
+    
+     <div id="paymentIframeContainer" style="display:none; margin-top: 20px;"></div>
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('initiate_payment.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status) {
+                    document.getElementById('paymentIframeContainer').style.display = 'block';
+                    document.getElementById('paymentIframeContainer').innerHTML = `<iframe src="${data.data.authorization_url}" width="100%" height="600px" frameborder="0"></iframe>`;
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </html>
