@@ -1,11 +1,13 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 import json
 
-# Define your secret key directly in the code (not recommended for production)
+app = Flask(__name__)
+CORS(app, resources={r"/initiate_payment": {"origins": "https://ideallogisticsinvestments.com"}})
+
 PAYSTACK_SECRET_KEY = 'sk_live_8fb3d0da528499cb5f464b1e16edbbe119a439fc'
 
-# Define the items and their prices with images
 items = {
     'item1': {
         'name': 'Double pane glass-3ft x 5ft',
@@ -33,8 +35,6 @@ items = {
     }
 }
 
-app = Flask(__name__)
-
 @app.route('/initiate_payment', methods=['POST'])
 def initiate_payment():
     data = request.json
@@ -56,7 +56,7 @@ def initiate_payment():
         'amount': amount,
         'email': email,
         'currency': 'KES',
-        'callback_url': 'https://yourdomain.com/callback'  # Replace with your callback URL
+        'callback_url': 'https://ideallogisticsinvestments.com/callback'  # Replace with your callback URL
     }
 
     response = requests.post('https://api.paystack.co/transaction/initialize', headers=headers, data=json.dumps(data))
