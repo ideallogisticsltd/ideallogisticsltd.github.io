@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template_string
 from flask_cors import CORS
 import requests
 import json
@@ -67,6 +67,113 @@ def initiate_payment():
         return jsonify({'authorization_url': authorization_url})
     else:
         return jsonify({'error': 'Failed to initialize payment', 'status_code': response.status_code}), response.status_code
+
+@app.route('/callback', methods=['GET'])
+def callback():
+    # Extract the transaction reference from the query parameters
+    reference = request.args.get('reference')
+
+    # Verify the transaction with Paystack
+    verify_url = f'https://api.paystack.co/transaction/verify/{reference}'
+    headers = {
+        'Authorization': f'Bearer {PAYSTACK_SECRET_KEY}',
+        'Content-Type': 'application/json'
+    }
+
+    verify_response = requests.get(verify_url, headers=headers)
+
+    if verify_response.status_code == 200:
+        verify_data = verify_response.json()
+        status = verify_data['data']['status']
+        amount = verify_data['data']['amount'] / 100  # Convert kobo to NGN
+
+        if status == 'success':
+            # Payment was successful
+            return render_template_string('''
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Payment Successful</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            margin: 0;
+                            padding: 0;
+                            background-color: #f4f4f4;
+                            text-align: center;
+                            padding: 50px;
+                        }
+                        h1 {
+                            color: green;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>Payment Successful!</h1>
+                    <p>Thank you for your payment of KES {{ amount }}.</p>
+                </body>
+                </html>
+            ''', amount=amount)
+        else:
+            # Payment failed
+            return render_template_string('''
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Payment Failed</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            margin: 0;
+                            padding: 0;
+                            background-color: #f4f4f4;
+                            text-align: center;
+                            padding: 50px;
+                        }
+                        h1 {
+                            color: red;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>Payment Failed</h1>
+                    <p>Sorry, your payment could not be processed.</p>
+                </body>
+                </html>
+            ''')
+    else:
+        # Verification failed
+        return render_template_string('''
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Payment Verification Failed</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f4f4f4;
+                        text-align: center;
+                        padding: 50px;
+                    }
+                    h1 {
+                        color: red;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Payment Verification Failed</h1>
+                <p>Sorry, we could not verify your payment.</p>
+            </body>
+            </html>
+        ''')
 
 if __name__ == '__main__':
     app.run(debug=True)
