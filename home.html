@@ -177,7 +177,7 @@
 
     <script>
       async function initiatePayment(itemId, email, amount) {
-    const response = await fetch('https://ideallogisticsinvestments.free.nf/initiate_payment.php', {
+    const response = await fetch('https://cors-anywhere.herokuapp.com/https://ideallogisticsinvestments.free.nf/initiate_payment.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
