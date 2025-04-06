@@ -176,11 +176,11 @@
     </div>
 
     <script>
-   async function initiatePayment(itemId, email, amount) {
-    const proxyUrl = 'https://api.allorigins.win/get?url=';
-    const targetUrl = encodeURIComponent('https://ideallogisticsinvestments.free.nf/initiate_payment.php');
+  async function initiatePayment(itemId, email, amount) {
+    const proxyUrl = 'https://cors.bridged.cc/';
+    const targetUrl = 'https://ideallogisticsinvestments.free.nf/initiate_payment.php';
 
-    const response = await fetch(`${proxyUrl}${targetUrl}`, {
+    const response = await fetch(proxyUrl + targetUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -190,15 +190,10 @@
 
     if (response.ok) {
         const data = await response.json();
-        if (data.contents) {
-            const paymentResponse = JSON.parse(data.contents);
-            if (paymentResponse.authorization_url) {
-                const iframe = document.getElementById('payment-iframe');
-                iframe.src = paymentResponse.authorization_url;
-                iframe.style.display = 'block';
-            } else {
-                alert('Failed to initialize payment');
-            }
+        if (data.authorization_url) {
+            const iframe = document.getElementById('payment-iframe');
+            iframe.src = data.authorization_url;
+            iframe.style.display = 'block';
         } else {
             alert('Failed to initialize payment');
         }
