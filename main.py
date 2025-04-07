@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template_string
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 import json
@@ -40,12 +40,13 @@ def initiate_payment():
     data = request.json
     item_id = data.get('item_id')
     email = data.get('email')
+    amount = data.get('amount')
 
     if item_id not in items:
         return jsonify({'error': 'Invalid item ID'}), 400
 
     item = items[item_id]
-    amount = item['price'] * 100  # Paystack expects amount in kobo (1 NGN = 100 kobo)
+    amount = amount * 100  # Paystack expects amount in kobo (1 NGN = 100 kobo)
 
     headers = {
         'Authorization': f'Bearer {PAYSTACK_SECRET_KEY}',
@@ -70,10 +71,7 @@ def initiate_payment():
 
 @app.route('/callback', methods=['GET'])
 def callback():
-    # Extract the transaction reference from the query parameters
     reference = request.args.get('reference')
-
-    # Verify the transaction with Paystack
     verify_url = f'https://api.paystack.co/transaction/verify/{reference}'
     headers = {
         'Authorization': f'Bearer {PAYSTACK_SECRET_KEY}',
@@ -88,7 +86,6 @@ def callback():
         amount = verify_data['data']['amount'] / 100  # Convert kobo to NGN
 
         if status == 'success':
-            # Payment was successful
             return render_template_string('''
                 <!DOCTYPE html>
                 <html lang="en">
@@ -117,7 +114,6 @@ def callback():
                 </html>
             ''', amount=amount)
         else:
-            # Payment failed
             return render_template_string('''
                 <!DOCTYPE html>
                 <html lang="en">
@@ -146,7 +142,6 @@ def callback():
                 </html>
             ''')
     else:
-        # Verification failed
         return render_template_string('''
             <!DOCTYPE html>
             <html lang="en">
