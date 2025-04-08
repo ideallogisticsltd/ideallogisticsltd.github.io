@@ -183,6 +183,7 @@
      <script>
   
   <script>
+  <script>
     async function initiatePayment(itemId, email, baseAmount) {
         const quantity = document.getElementById(`quantity-${itemId}`).value;
         const totalAmount = baseAmount * quantity;
@@ -197,7 +198,18 @@
             });
 
             if (!response.ok) {
+                // Log the response text for debugging
+                const errorText = await response.text();
+                console.error('Server responded with non-OK status:', response.status, errorText);
                 throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            // Ensure the response is JSON
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                const errorText = await response.text();
+                console.error('Response is not JSON:', errorText);
+                throw new Error('Response is not JSON');
             }
 
             const data = await response.json();
@@ -213,6 +225,7 @@
             alert('Failed to initialize payment. Please try again later.');
         }
     }
+</script>
 </script>
 </script>
 </html>
