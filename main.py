@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template_string
 from flask_cors import CORS
 import requests
 import json
@@ -40,13 +40,14 @@ def initiate_payment():
     data = request.json
     item_id = data.get('item_id')
     email = data.get('email')
-    amount = data.get('amount')
+    quantity = data.get('quantity', 1)  # Default to 1 if quantity is not provided
 
     if item_id not in items:
         return jsonify({'error': 'Invalid item ID'}), 400
 
     item = items[item_id]
-    amount = amount * 100  # Paystack expects amount in kobo (1 NGN = 100 kobo)
+    total_amount = item['price'] * quantity  # Calculate total amount based on quantity
+    amount = total_amount * 100  # Paystack expects amount in kobo (1 NGN = 100 kobo)
 
     headers = {
         'Authorization': f'Bearer {PAYSTACK_SECRET_KEY}',
