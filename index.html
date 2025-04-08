@@ -178,19 +178,24 @@
     </div>
 
  <script>
+  <script>
     async function initiatePayment(itemId, email, baseAmount) {
         const quantity = document.getElementById(`quantity-${itemId}`).value;
         const totalAmount = baseAmount * quantity;
 
-        const response = await fetch('https://ideallogisticsinvestments.com/initiate_payment', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ item_id: itemId, email: email, amount: totalAmount, quantity: quantity })
-        });
+        try {
+            const response = await fetch('https://ideallogisticsinvestments.com/initiate_payment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ item_id: itemId, email: email, amount: totalAmount, quantity: quantity })
+            });
 
-        if (response.ok) {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
             const data = await response.json();
             if (data.authorization_url) {
                 const iframe = document.getElementById('payment-iframe');
@@ -199,10 +204,12 @@
             } else {
                 alert('Failed to initialize payment');
             }
-        } else {
-            alert('Failed to initialize payment');
+        } catch (error) {
+            console.error('Payment initialization failed:', error);
+            alert('Failed to initialize payment. Please try again later.');
         }
     }
+</script>
 </script>
 </body>
 </html>
