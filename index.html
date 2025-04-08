@@ -191,17 +191,17 @@
             });
 
             if (response.ok) {
-                const data = await response.json();
-                if (data.authorization_url) {
-                    const iframe = document.getElementById('payment-iframe');
-                    iframe.src = data.authorization_url;
-                    iframe.style.display = 'block';
-                } else {
-                    alert('Failed to initialize payment');
-                }
-            } else {
-                alert('Failed to initialize payment');
-            }
+        const data = await response.json();
+        if (data.authorization_url) {
+            window.location.href = data.authorization_url; // Redirect to the payment page
+        } else {
+            alert('Failed to initialize payment');
+        }
+    } else {
+        alert('Failed to initialize payment');
+    }
+
+            
         }
     </script>
 </body>
